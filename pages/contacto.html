@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+<!-- link btp -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
+<!-- link css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Portafolio / Camila Ballarino</title>
+</head>
+
+<body class="pagina-contacto">
+<!--Encabezado -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-custom navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Camila Ballarino</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/sobre-mi.html">Sobre mí</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/proyectos.html">Proyectos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="../pages/contacto.html">Contacto</a>
+        </li>
+      </ul>
+     
+    </div>
+  </div>
+</nav> 
+         
+    </header>
+    <!-- contenido principal -->  
+     
+     <main class="contact">
+        <section  class="contact-section">
+            <h2>
+            ¡Gracias por visitar mi sitio!
+            </h2>
+            <p class="contact-text"> 
+            Desarrollo sitios web desde cero, con foco en estructuras claras, diseño responsive y una experiencia de usuario cuidada.
+            </p>
+            <p class="contact-text">
+                Ofrezco mis conocimientos en Front-end para la creación y mejora de proyectos digitales, adaptándome a distintas necesidades y contextos.
+            </p>
+            <p class="contact-text">
+               Si te interesa trabajar juntos o tenés una idea para desarrollar, podés contactarme a través del formulario a continuación. 
+            </p>
+              
+            
+            
+        </section>
+
+          <!-- formulario -->   
+        
+        <section class="form-contact">   
+            <form action="/submit"  method="post">
+    <div class="form-group">
+       <label for="nombre"> Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="tu nombre" autocomplete="given-name">
+    </div>
+    
+    <div class="form-group">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required placeholder="tu apellido" autocomplete="family-name">
+    </div>
+    
+    <div class="form-group">
+        <label for="email"> Email:</label>
+        <input type="email" id="email" name="email" required placeholder="tuemail@email.com" autocomplete="email">
+    </div>
+    
+    <div class="form-group">
+        <label for="mensaje">Escribe tu mensaje aquí:</label>
+        <textarea name="mensaje" id="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+    </div>
+    
+    <div>
+    <button type="submit" class="btn">Enviar mensaje</button>
+    </div>
+    
+            </form>    
+        </section>
+     </main>
+
+     <!-- pie de pagina -->
+   <footer>
+    <p>Encuéntrame en</p>
+    <div class="social-icons">
+       <a href="https://www.linkedin.com" target="_blank">
+        <img src="../images/in.jpg" alt="Linkedin">  
+       </a>
+       <a href="https://github.com/" target="_blank">
+        <img src="../images/git.png" alt="Github">
+       </a>
+       <a href="mailto:ballarinocamila@gmail.com">
+         <img src="../images/mail.jpg" alt="Email">
+       </a>
+
+    </div>
+ </footer>   
+  
+ 
+ <!-- script btp -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>  
+</body>
+</html>
