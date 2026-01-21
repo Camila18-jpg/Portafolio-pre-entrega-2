@@ -432,7 +432,7 @@ body.pagina-sobre-mi{
 .about-me-text h2 {
     text-align: left;
     font-size: 2rem;
-    color: #00ff6a;
+    color: whitesmoke;
     font-family: "Space Grotesk", sans-serif;
     margin-bottom: 30px;
 }
@@ -449,6 +449,9 @@ body.pagina-sobre-mi{
      font-family: "plus jakarta sans", sans-serif;
      
  }
+ .about-me-text p.color{
+   color: #00ff6a; 
+ } 
 /* imagen sobre mi */
 
  .about-me-image img{
@@ -465,6 +468,11 @@ body.pagina-sobre-mi{
  .about-me-image img:hover {
     transform: scale(1.02);
     filter: grayscale(0%);
+}
+/* seccion como trabajo */
+.contenedor{
+    display: grid;
+    gap: 1.5 rem;
 }
 
 /* seccion proceso de trabajo */
