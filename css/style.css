@@ -438,7 +438,7 @@ body.pagina-sobre-mi{
     margin-bottom: 30px;
 }
  .about-me p {
-   font-size: 1.1em;
+   font-size: 1.2rem;
     color: whitesmoke;
     font-weight: 400;
     
@@ -470,174 +470,29 @@ body.pagina-sobre-mi{
     transform: scale(1.02);
     filter: grayscale(0%);
 }
-/* seccion como trabajo */
-.contenedor{
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 150px;
-    
-    max-width: 1200px;
-    margin: 150px auto 0;
-    padding: 0 1rem;
+
+/* boton scroll */
+ main .boton-scroll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   margin: 2rem auto 0;
+  padding: 0.75rem 1rem;
+
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1;
+
+  color: #00ff6a;
+  text-decoration: none;
+
+
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; 
 }
 
-.contenedor .titulo {
-  grid-column: 1 / -1; 
-  text-align: center;
- 
-}
-.contenedor .titulo h3{
-    color: whitesmoke;
-    font-size: 2em;
-    font-weight: 600;
-    margin: 60px 0;
-    font-family:"Space Grotesk", sans-serif ;
-}
-.contenedor .contenido{
-  display: flex;  
-  flex-direction: column;
-  gap: 1rem;
-  padding: 20px;
-    border: 2px solid rgb(96, 244, 150);
-    background-color: rgba(0, 0, 0, 0.85);
-  
-}
-
-.contenedor .contenido h4{
-    color: whitesmoke;
-    font-size: 1.5rem;
-    font-family: "Share Tech Mono" , sans-serif ;
-    text-align: center;
-    padding-bottom: 10px;
-    font-weight: 400;
-    
-}
-.contenedor .contenido p.color-contenido{
-    text-align: center;
-    color: #00ff6a;  
-    font-family: "plus jakarta sans", sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    
-}
-.contenedor .contenido p{
- text-align: center;
-    color: whitesmoke;  
-    font-family: "plus jakarta sans", sans-serif;
-    font-size: 1rem;   
-    font-weight: 400;
-}
-
-
-
-
-.contenedor .cierre{
-  grid-column: 1 / -1; 
-  text-align: center;
-margin: 60px 0;
-}
-.contenedor .cierre h5{
-   color: whitesmoke;
-   font-size: 1.2rem;
-   font-family: "plus jakarta sans", sans-serif;
-   font-weight: 400;
-   margin-top: 20px;
-  
-    
-}
-
-.contenedor .cierre h5.negrita{
-    color: #00ff6a;  
-    font-weight: 600;
-}
-
-
-/* seccion proceso de trabajo */
-
-.section-content{
-     
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-     max-width: 1200px;
-    margin: 150px auto 0;
-    padding: 0 1rem;
-    
-}
-.section-content .section-title{
-    grid-column: 1 / -1; 
-    text-align: center;
-    margin: 60px 0;
-}
-
- .section-title h3{
-    margin-top: 40px;
-    text-align: center;
-    color: whitesmoke;
-    font-size: 2em;
-    font-weight: 600;
-    margin-bottom: 60px;
-    font-family:"Space Grotesk", sans-serif ;
-    
-}
- .section-box{
-    display: grid;
-    gap: 1rem;
-    padding: 20px;
-    border: 2px solid rgb(96, 244, 150);
-    background-color: rgba(0, 0, 0, 0.85);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    position: relative;
-
-}
-.section-box:hover{
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-}
-
-.section-box::before{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url(../images/fondo.png);
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 0;   
-}
-
-.section-box:hover::before{
-    opacity: 0.8;   
-}
-
-
-
-
-
-.section-box h4{
-  margin: 0;
-   
-    font-family: "share tech mono" , sans-serif ;
-    font-size: 1.5em;
-    color: whitesmoke;
-    z-index: 1;
-    position: relative;
-    text-shadow: 0 0 6px rgba(0,0,0,0.5);
-}
-
-.section-box p{
-   color: whitesmoke;
-    font-family:"plus jakarta sans", sans-serif ;
-    font-size: 1em;
-   margin: 0;
-    z-index: 1;
-    position: relative;
-    text-shadow: 0 0 6px rgba(0,0,0,0.5);
-}
+/* media */
 
 @media (max-width: 991.98px){
 
@@ -685,39 +540,170 @@ margin: 60px 0;
     transform: scale(1.02);
     filter: grayscale(0%);
 }
+}
 
-   /* proceso de trabajo */
+/* secciones como trabajo y proceso de trabajo */
 
-    .section-content {
-        padding: 100px 24px;
-        gap: 32px;
+.contenedor-grid{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    
+    
+    max-width: 1200px;
+    margin: 150px auto 0;
+    padding: 0 1rem;
+}
+
+.contenedor-grid .titulo {
+  grid-column: 1 / -1; 
+  text-align: center;
+ 
+}
+.contenedor-grid .titulo h3{
+    color: whitesmoke;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 60px 0;
+    font-family:"Space Grotesk", sans-serif ;
+}
+.contenedor-grid .contenido{
+  display: flex;  
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 20px;
+    border: 2px solid rgb(96, 244, 150);
+    background-color: rgba(0, 0, 0, 0.85);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+  
+}
+
+.contenedor-grid .contenido h4{
+    color: whitesmoke;
+    font-size: 1.5rem;
+    font-family: "Share Tech Mono" , sans-serif ;
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: 400;
+    z-index: 1;
+    position: relative;
+    
+}
+.contenedor-grid .contenido p.color-contenido{
+    text-align: center;
+    color: #00ff6a;  
+    font-family: "plus jakarta sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    z-index: 1;
+    position: relative;
+}
+.contenedor-grid .contenido p{
+ text-align: center;
+    color: whitesmoke;  
+    font-family: "plus jakarta sans", sans-serif;
+    font-size: 1rem;   
+    font-weight: 400;
+    z-index: 1;
+    position: relative;
+}
+
+.contenedor-grid .cierre{
+  grid-column: 1 / -1; 
+  text-align: center;
+    margin: 20px 0;
+}
+.contenedor-grid .cierre h5{
+   color: whitesmoke;
+   font-size: 1.2rem;
+   font-family: "plus jakarta sans", sans-serif;
+   font-weight: 400;
+   
+}
+
+.contenedor-grid .cierre h5.negrita{
+    color: #00ff6a; 
+    font-size: 1.2rem; 
+    font-weight: 600;
+}
+
+/* hover */
+
+.contenedor-grid .contenido:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+.contenedor-grid .contenido::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(../images/fondo.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;   
+   
+}
+.contenedor-grid .contenido:hover::before{
+    opacity: 0.4;   
+}
+
+/* media */
+
+@media (max-width: 991.98px){
+    
+    .contenedor-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 80px;
+        padding: 0 16px;
+        
+}
+.contenedor-grid .contenido{
+        min-height: 220px;
     }
-
-    .section-title h3 {
-        font-size: 1.8rem;
-        margin-bottom: 40px;
-    }
-
-    .section-box {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-
-    .section-box h4 {
-        font-size: 1.3rem;
-    }
-
-    .section-box p {
-        font-size: 0.95rem;
-        margin-top: 16px;
-        line-height: 1.6;
-    }
+.contenedor-grid .cierre{
+    margin: 40px 0;
+}
+.contenedor-grid .cierre h5
+{
+   color: whitesmoke;
+   font-size: 1rem;
+   letter-spacing: 0.04em;
+   font-weight: 300;
+      
+}
+.contenedor-grid .cierre h5.negrita{
+   color:#00ff6a ;
+   font-size: 1rem;
+   letter-spacing: 0.04em;
+   font-weight: 300;
+      
+}
+}
 
    
-    .section-box:active::before {
-        opacity: 0.7;
-    } 
-}
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
 
 /* seccion contacto */
 body.pagina-contacto{
