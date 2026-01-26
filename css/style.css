@@ -232,6 +232,7 @@ font-family: "Space Grotesk", sans-serif;
         border-color 0.25s ease,
         box-shadow 0.25s ease,
         transform 0.2s ease;
+
 }
 
 
@@ -691,25 +692,6 @@ body.pagina-sobre-mi{
 }
 }
 
-   
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
 /* seccion contacto */
 body.pagina-contacto{
     min-height: 100vh;
@@ -849,6 +831,7 @@ body.pagina-contacto{
 
 
 /* seccion proyectos */
+
 .pagina-proyectos{
     min-height: 100vh;
     background-color: rgba(0, 0, 0, 0.85);
@@ -903,4 +886,33 @@ margin: 60px 0
    height: auto;
    border: 2px solid #00ff6a;
    border-radius: 12px;
+}
+@media (max-width: 991.98px) {
+.proyectos{
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    
+}
+.proyectos .proyectos-titulo{
+   
+    margin: 30px 0;
+}
+.proyectos .proyectos-titulo h2{
+   
+    font-size: 1.5rem;
+    margin: 20px 0 50px 0;
+      
+}
+.proyectos .proyectos-titulo h3{
+    
+    font-size: 1.2rem;
+    color: #00ff6a;  
+}
+.proyectos .proyectos-imagen img{
+   
+   max-width: 300px;
+   width: 100%;
+   
+}
+
 }
