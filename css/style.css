@@ -203,11 +203,12 @@ font-family: "Space Grotesk", sans-serif;
  .btn{
    display: inline-block;
    padding: 10px 28px;
-    margin: 60px 0 0 20px;
+   margin: 60px 0 ;
+   width: fit-content;
    position: relative;
    z-index: 1;
    
-   width: fit-content;
+   
 
    font-family: "plus jakarta sans", sans-serif;
    font-size: 1rem;
@@ -219,7 +220,7 @@ font-family: "Space Grotesk", sans-serif;
 
    line-height: 1.2;
 
-   border: 2px solid whitesmoke;
+   border: 2px solid rgba(245,245,245,0.7);
    border-radius: 2px;
 
    cursor: pointer;
@@ -229,7 +230,8 @@ font-family: "Space Grotesk", sans-serif;
         border-color 0.25s ease,
         box-shadow 0.25s ease,
         transform 0.2s ease;
-
+    -webkit-tap-highlight-color: transparent;
+        
 }
 
 
@@ -237,14 +239,22 @@ font-family: "Space Grotesk", sans-serif;
     
       color: #00ff9d;
     border-color: #00ff9d;
-    box-shadow: 0 0 12px rgba(74, 251, 151, 0.45);
+    box-shadow: 0 0 12px rgba(0, 255, 157, 0.45) ;
     transform: translateY(-1px);
 }
 
+
 .btn:focus-visible{
     outline: none;
-    box-shadow: 0 0 0 2px rgb(74, 251, 151, 0.4);
+    box-shadow: 0 0  2px rgb(74, 251, 151, 0.4);
   
+}
+.btn:active{
+    background-color: transparent;
+  color:#00ff9d ;
+  border-color: #00ff9d;
+  box-shadow: none;
+  transform:translateY(0) ;
 }
 
 @media (max-width: 991.98px) {
@@ -413,8 +423,8 @@ body.pagina-sobre-mi{
     background-color: rgba(0, 0, 0, 0.85);
     background-image: linear-gradient(
         180deg,
-        rgba(0,0,0,0.5), 
-        rgba(0,0,0,0.7) );
+        rgba(0,0,0,0.6), 
+        rgba(0,0,0,0.95) );
    
 }
 
@@ -695,8 +705,8 @@ body.pagina-contacto{
     background-color: rgba(0, 0, 0, 0.85);
     background-image: linear-gradient(
         180deg,
-        rgba(0,0,0,0.5), 
-        rgba(0,0,0,0.7) );
+        rgba(0,0,0,0.6), 
+        rgba(0,0,0,0.95) );
    
 }
 
@@ -838,34 +848,38 @@ body.pagina-contacto{
     background-color: rgba(0, 0, 0, 0.85);
     background-image: linear-gradient(
         180deg,
-        rgba(0,0,0,0.5), 
-        rgba(0,0,0,0.7) );
+        rgba(0,0,0,0.6), 
+        rgba(0,0,0,0.95) );
    
 }
 
 .proyectos{
     display: grid;
-    grid-template-rows: auto auto;
-    gap: 2rem;
+    grid-template-columns:repeat(2, 1fr);
+    gap: 1rem;
 
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
+    
 
 }
-.proyectos .proyectos-titulo{
-margin: 60px 0  
+.proyectos .proyectos-titulo,
+.proyectos .btn{
+    margin: 40px 0 60px;
+    grid-column:1 / -1 ;
+    justify-self: center;
+
       
 }
 
 .proyectos .proyectos-titulo h2{
     color: whitesmoke;
     font-size: 2.5rem;
-   
-    margin: 60px 0 80px 0;
     font-family: "Space Grotesk", sans-serif;
     text-transform: uppercase;
     text-shadow: 0 0 6px rgba(0,0,0,0.3);
+    padding: 60px 0 20px 0;
+    text-align: center;
    
 }
 
@@ -874,52 +888,91 @@ margin: 60px 0
     font-size: 1.5rem;
     font-weight: 400;
     font-family: "plus jakarta sans", sans-serif;
+    margin:80px 0;
+    text-align: center;
    
+}
+
+.proyectos .proyectos-descripcion{
+    text-align: center;
 }
 
 .proyectos .proyectos-descripcion h4{
     color:whitesmoke ;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    font-family:"share tech mono", sans-serif  ;
-    text-align: center;
+    font-family:"plus jakarta sans", sans-serif  ;
+   
+    margin: 20px 0 40px 0;
 
 }
+.proyectos .proyectos-descripcion h5{
+    color:whitesmoke ;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family:"plus jakarta sans", sans-serif  ;
+    margin: 20px 0;
+    
 
-.proyectos .proyectos-imagen{
-  display: flex;
-  justify-content: center;
+}
+.proyectos .proyectos-descripcion p{
+    color:whitesmoke ;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family:"plus jakarta sans", sans-serif  ;
+    
+
+}
+.proyectos .proyectos-imagen {
+  justify-self: left;
+  
+   
 }
 .proyectos .proyectos-imagen img{
    width: 100%;
-   max-width: 500px;
+   max-width: 380px;
    height: auto;
-   border: 2px solid #00ff6a;
+   border: 2px solid #2c4a39;
    border-radius: 12px;
+  
+   
 }
 
 
 @media (max-width: 991.98px) {
 .proyectos{
     grid-template-columns: 1fr;
-    gap: 1rem;
-    
+    gap: 2.5rem;   
 }
 .proyectos .proyectos-titulo{
-   
-    margin: 30px 0;
+    margin: 30px 0;     
 }
+
 .proyectos .proyectos-titulo h2{
-   
+   text-align: center;
     font-size: 1.5rem;
-    margin: 20px 0 50px 0;
-      
+    margin: 30px 0;     
+    padding: 20px 0; 
 }
-.proyectos .proyectos-titulo h3{
-    
+
+.proyectos .proyectos-titulo h3{  
     font-size: 1.2rem;
     color: #00ff6a;  
+    margin: 0 0 20px 0;
 }
+
+.proyectos .proyectos-descripcion{
+    text-align: center;
+}
+
+.proyectos .proyectos-descripcion h4{
+    margin: 20px 0;
+
+}
+.proyectos .proyectos-imagen{
+  justify-self: center;  
+}
+
 .proyectos .proyectos-imagen img{
    
    max-width: 300px;
