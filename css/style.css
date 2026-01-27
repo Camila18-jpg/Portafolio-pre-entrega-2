@@ -150,9 +150,6 @@ font-family: "Space Grotesk", sans-serif;
         transition: background-color 0.25s ease, color 0.25s ease;
        
     }
-
-    
-
 }
 
 /* estilos del main */
@@ -307,10 +304,10 @@ font-family: "Space Grotesk", sans-serif;
     .btn:hover,
     .btn:focus,
     .btn:active {
-        color: #000000;
-         background-color: #00ff9d;
+        color: #00ff9d;
+         background-color: #0a120f;
         border-color: #00ff9d;
-        box-shadow:0 0 16px rgba(0, 255, 157, 0.7);
+        box-shadow:0 0 16px rgba(46, 249, 90, 0.7);
         transform: translateY(-2px);
     }
     
@@ -703,56 +700,60 @@ body.pagina-contacto{
    
 }
 
-.contact {  
-    padding: 60px 20px;
+.contacto {  
+    margin: 60px 0 20px 0;
 }
 
-.contact-section {
+.contacto-titulo {
    max-width: 900px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 40px 0 20px 0;
     text-align: center;
 }
 
-.contact-section h2 {
+.contacto-titulo h2 {
     text-align: center;
-    color: whitesmoke;
-    font-size: 2em;
+    color:#00ff6a ;
+    font-size: 2.5rem;
     font-weight: 600;
-    margin-bottom: 60px;
-    font-family:"Space Grotesk", sans-serif ;
-    letter-spacing: 0.5px;
-   
-    
+    margin: 20px 0 60px 0;
+    font-family:"Space Grotesk", sans-serif ;    
 }
 
-.contact-text {
-    font-size: 1.2em;
+.contacto-texto {
+    font-size: 1.3rem;
     font-family: "plus jakarta sans", sans-serif;
     color: whitesmoke;
-    letter-spacing: 1px;
-    margin-bottom: 60px;
+    margin-top: 30px;
+    font-weight: 300;
    
+}
+.contacto-texto-negrita{
+    font-size: 1.3rem;
+    font-family: "plus jakarta sans", sans-serif;
+    color: #00ff6a;
+    margin: 30px 0;
+    font-weight: 600;
 }
 
 /* formulario de contacto */
     
-.form-contact {
+.form-contacto {
     background-image: url(../images/fondo.png);
     background-size: cover;
-    opacity: 0.9;
+    opacity: 0.7;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 80px auto;
     padding: 60px;
     border:2px solid rgb(96, 244, 150) ;
     
 }
 
-.form-group {
+.form-grupo {
     margin-bottom: 60px;
  }  
 
- .form-group label {
+ .form-grupo label {
     color: whitesmoke;
     font-size: 1.2em;
     font-weight: 400;
@@ -761,8 +762,8 @@ body.pagina-contacto{
     font-family:"share tech mono", sans-serif ;
     z-index: 1;
 } 
-.form-group input,
-.form-group textarea {
+.form-grupo input,
+.form-grupo textarea {
     width: 100%;
     padding: 12px;
     color: whitesmoke;
@@ -773,8 +774,8 @@ body.pagina-contacto{
     font-family: "plus jakarta sans", sans-serif;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+.form-grupo input:focus,
+.form-grupo textarea:focus {
     outline: none;
     border-color: #00ff9d;
     box-shadow: 0 0 8px rgba(0,255,157,0.4);
@@ -783,29 +784,29 @@ body.pagina-contacto{
 @media (max-width: 991.98px) {
 
     /* sección contacto */
-    .contact {
+    .contacto {
         padding: 40px 16px;
     }
 
-    .contact-section {
+    .contacto-titulo {
         max-width: 100%;
         padding: 20px 12px;
     }
 
-    .contact-section h2 {
+    .contacto-titulo h2 {
         font-size: 1.6rem;
         margin-bottom: 40px;
         letter-spacing: 0.3px;
     }
 
-    .contact-text {
+    .contacto-texto {
         font-size: 1rem;
         margin-bottom: 40px;
         letter-spacing: 0.5px;
     }
 
     /* formulario de contacto */
-    .form-contact {
+    .form-contacto {
         max-width: 100%;
         padding: 30px 20px;
         border-width: 2px;
@@ -813,17 +814,17 @@ body.pagina-contacto{
         background-color: rgba(0,0,0,0.85); 
     }
 
-    .form-group {
+    .form-grupo {
         margin-bottom: 30px;
     }
 
-    .form-group label {
+    .form-grupo label {
         font-size: 1rem;
         margin-bottom: 6px;
     }
 
-    .form-group input,
-    .form-group textarea {
+    .form-grupo input,
+    .form-grupo textarea {
         padding: 10px;
         font-size: 0.95rem;
     }
@@ -859,7 +860,7 @@ margin: 60px 0
 
 .proyectos .proyectos-titulo h2{
     color: whitesmoke;
-    font-size: 2rem;
+    font-size: 2.5rem;
    
     margin: 60px 0 80px 0;
     font-family: "Space Grotesk", sans-serif;
@@ -869,13 +870,22 @@ margin: 60px 0
 }
 
 .proyectos .proyectos-titulo h3{
-    color: whitesmoke;
-    font-size: 1.3rem;
-    font-weight: 300;
-    
-    font-family: "share tech mono", sans-serif;
+    color:#00ff6a ;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: "plus jakarta sans", sans-serif;
    
 }
+
+.proyectos .proyectos-descripcion h4{
+    color:whitesmoke ;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family:"share tech mono", sans-serif  ;
+    text-align: center;
+
+}
+
 .proyectos .proyectos-imagen{
   display: flex;
   justify-content: center;
@@ -887,6 +897,8 @@ margin: 60px 0
    border: 2px solid #00ff6a;
    border-radius: 12px;
 }
+
+
 @media (max-width: 991.98px) {
 .proyectos{
     grid-template-columns: 1fr;
