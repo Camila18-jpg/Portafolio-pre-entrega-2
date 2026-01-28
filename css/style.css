@@ -263,7 +263,7 @@ font-family: "Space Grotesk", sans-serif;
     .seccion-principal {
         display: flex;
         min-height: auto;
-        padding: 140px 24px;
+        padding: 30px 10px;
         justify-content: center;   
         align-items: center;
         position: relative;
@@ -465,6 +465,7 @@ body.pagina-sobre-mi{
  }
  .sobre-mi-texto p.color{
    color: #00ff6a; 
+   font-weight: 600;
  } 
 /* imagen sobre mi */
 
