@@ -18,14 +18,14 @@ body.pagina-principal{
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    z-index: -1;
+    z-index: 0;
 }
 body.pagina-principal::before{
     content: "";
     position: fixed;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
     pointer-events: none;
 }
 
@@ -178,7 +178,7 @@ font-family: "Space Grotesk", sans-serif;
     color: whitesmoke ;
     margin: 40px 0 20px 0;
     
-    font-family:"share tech mono" , sans-serif;
+    font-family:"Space Grotesk" , sans-serif;
     text-transform: uppercase;
     text-shadow: 0 0 6px rgba(0,0,0,0.3);
    
@@ -464,7 +464,7 @@ body.pagina-sobre-mi{
      
  }
  .sobre-mi-texto p.color{
-   color: #00ff6a; 
+   color: #00ff9d; 
    font-weight: 600;
  } 
 /* imagen sobre mi */
