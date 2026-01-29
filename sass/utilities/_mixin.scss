@@ -1,0 +1,40 @@
+// mixin con parametros
+
+@mixin medidas ($padding, $margin, $color) {
+    padding: $padding;
+    margin: $margin;
+    color: $color;
+   
+}
+
+// mixin sin parametros
+
+@mixin base{
+    display: flex; 
+
+    flex-direction: column; 
+
+    text-align: right; 
+
+    max-width: 500px; 
+
+    align-items: flex-end; 
+
+     
+}
+
+@mixin tipografia{
+    font-size: 2.5rem; 
+
+    font-weight: 300; 
+
+    color: whitesmoke ; 
+
+    margin: 40px 0 20px 0; 
+
+    font-family:"share tech mono" , sans-serif; 
+    
+}
+
+// mixin hibrido
+
