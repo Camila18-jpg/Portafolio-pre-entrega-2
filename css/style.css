@@ -88,7 +88,7 @@ header .navbar-custom .navbar-toggler {
     flex-basis: auto;
     border-radius: 8px;
     padding: 16px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.85);
   }
   .navbar-custom .navbar-nav {
     align-items: flex-end;
@@ -162,7 +162,7 @@ header .navbar-custom .navbar-toggler {
   background-color: transparent;
   letter-spacing: 0.03em;
   line-height: 1.2;
-  border: 2px solid rgba(245, 245, 245, 0.7);
+  border: 2px solid whitesmoke;
   border-radius: 2px;
   cursor: pointer;
   transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
@@ -171,7 +171,7 @@ header .navbar-custom .navbar-toggler {
 .seccion-principal .btn:hover {
   color: #00ff9d;
   border-color: #00ff9d;
-  box-shadow: 0 0 12px rgba(0, 255, 157, 0.45);
+  box-shadow: 0 0 12px rgba(74, 251, 151, 0.4);
   transform: translateY(-1px);
 }
 .seccion-principal .btn:focus-visible {
@@ -223,7 +223,7 @@ header .navbar-custom .navbar-toggler {
     padding: 12px 28px;
     font-size: 1rem;
     color: whitesmoke;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: transparent;
     border: 2px solid whitesmoke;
     border-radius: 2px;
     cursor: pointer;
@@ -234,9 +234,9 @@ header .navbar-custom .navbar-toggler {
   }
   .btn:hover, .btn.focus, .btn:active {
     color: #00ff9d;
-    background-color: #0a120f;
+    background-color: trans;
     border-color: #00ff9d;
-    box-shadow: 0 0 16px rgba(46, 249, 90, 0.7);
+    box-shadow: 0 0 16px #00ff9d;
     transform: translateY(-2px);
   }
 }
@@ -338,7 +338,7 @@ footer .social-icons a:hover img {
   font-family: "plus jakarta sans", sans-serif;
 }
 .sobre-mi .sobre-mi-texto p.color {
-  color: #00ff6a;
+  color: #00ff9d;
   font-weight: 600;
 }
 .sobre-mi .sobre-mi-imagen img {
@@ -366,7 +366,7 @@ main .boton-scroll {
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1;
-  color: #00ff6a;
+  color: #00ff9d;
   text-decoration: none;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
@@ -435,7 +435,7 @@ main .boton-scroll {
   justify-content: center;
   gap: 1rem;
   padding: 20px;
-  border: 2px solid rgb(96, 244, 150);
+  border: 2px solid #00ff9d;
   background-color: rgba(0, 0, 0, 0.85);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
@@ -507,7 +507,7 @@ main .boton-scroll {
 }
 .contacto .contacto-titulo h2 {
   text-align: center;
-  color: #00ff6a;
+  color: #00ff9d;
   font-size: 2.5rem;
   font-weight: 600;
   margin: 20px 0 60px 0;
@@ -523,7 +523,7 @@ main .boton-scroll {
 .contacto .contacto-titulo .contacto-texto-negrita {
   font-size: 1.3rem;
   font-family: "plus jakarta sans", sans-serif;
-  color: #00ff6a;
+  color: #00ff9d;
   margin: 30px 0;
   font-weight: 600;
 }
@@ -534,7 +534,7 @@ main .boton-scroll {
   max-width: 700px;
   margin: 80px auto;
   padding: 60px;
-  border: 2px solid rgb(96, 244, 150);
+  border: 2px solid #00ff9d;
 }
 .contacto .form-contacto .form-grupo {
   margin-bottom: 60px;
@@ -563,7 +563,7 @@ main .boton-scroll {
 .contacto .form-contacto .form-grupo textarea:focus {
   outline: none;
   border-color: #00ff9d;
-  box-shadow: 0 0 10px rgba(158, 237, 172, 0.4);
+  box-shadow: 0 0 10px #00ff9d;
 }
 .contacto .form-contacto .btn {
   display: inline-block;
@@ -580,7 +580,7 @@ main .boton-scroll {
   background-color: transparent;
   letter-spacing: 0.03em;
   line-height: 1.2;
-  border: 2px solid rgba(245, 245, 245, 0.7);
+  border: 2px solid whitesmoke;
   border-radius: 2px;
   cursor: pointer;
   transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
@@ -589,7 +589,7 @@ main .boton-scroll {
 .contacto .form-contacto .btn:hover {
   color: #00ff9d;
   border-color: #00ff9d;
-  box-shadow: 0 0 12px rgba(0, 255, 157, 0.45);
+  box-shadow: 0 0 12px rgba(74, 251, 151, 0.4);
   transform: translateY(-1px);
 }
 .contacto .form-contacto .btn:focus-visible {
@@ -643,7 +643,7 @@ main .boton-scroll {
     padding: 12px 28px;
     font-size: 1rem;
     color: whitesmoke;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: transparent;
     border: 2px solid whitesmoke;
     border-radius: 2px;
     cursor: pointer;
@@ -654,9 +654,9 @@ main .boton-scroll {
   }
   .contacto .form-contacto .btn:hover, .contacto .form-contacto .btn.focus, .contacto .form-contacto .btn:active {
     color: #00ff9d;
-    background-color: #0a120f;
+    background-color: transparent;
     border-color: #00ff9d;
-    box-shadow: 0 0 16px rgba(46, 249, 90, 0.7);
+    box-shadow: 0 0 16px #00ff9d;
     transform: translateY(-2px);
   }
 }

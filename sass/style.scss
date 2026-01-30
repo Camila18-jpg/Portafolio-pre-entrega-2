@@ -1,9 +1,15 @@
+
+@use "utilities/mixin";
+@use "utilities/variables";
+
 // reset
 @use "base/reset";
+
 html, body{
     width: 100%;
     height: 100%;
 }
+
 // pagina principal
 
 // fondo principal
@@ -50,7 +56,7 @@ html, body{
         
      .navbar-custom .navbar-brand{ 
 
-    color:whitesmoke ; 
+    color: variables.$color-principal; 
     letter-spacing: 0.5px; 
     font-size: 1.2rem; 
     font-weight: 200; 
@@ -59,7 +65,7 @@ html, body{
      .nav-link { 
 
     text-decoration: none; 
-    color: whitesmoke;
+    color:variables.$color-principal;
     letter-spacing: 0.08em; 
     font-weight: 500; 
     font-family: "Share Tech Mono", sans-serif; 
@@ -112,7 +118,7 @@ html, body{
          flex-basis: auto; 
         border-radius: 8px; 
         padding: 16px; 
-        background-color:rgba(0,0,0,0.8); ;     
+        background-color:rgba(0,0,0,0.85); ;     
     } 
  
 
@@ -132,7 +138,7 @@ html, body{
     .navbar-custom .nav-link { 
         min-width: 180px; 
         text-align: left; 
-        color: whitesmoke; 
+        color: variables.$color-principal; 
         padding: 10px 16px; 
         border-radius: 6px; 
         transition: background-color 0.25s ease, color 0.25s ease;    
@@ -165,7 +171,7 @@ html, body{
     h2{
     font-size: 2.5rem; 
     font-weight: 300; 
-    color: whitesmoke ; 
+    color: variables.$color-principal ; 
     
     font-family:"Share Tech Mono" , sans-serif; 
     text-transform: uppercase; 
@@ -175,7 +181,7 @@ html, body{
         h3 { 
     font-size: 1.5rem; 
     font-weight: 600; 
-    color: whitesmoke; 
+    color:variables.$color-principal; 
     font-family: "plus jakarta sans", sans-serif; 
     margin: 40px 0 20px 0; 
 } 
@@ -183,7 +189,7 @@ html, body{
         p { 
     font-size: 1.2rem; 
     font-weight: 400; 
-    color: whitesmoke; 
+    color: variables.$color-principal; 
     font-family: "plus jakarta sans", sans-serif; 
 
     } 
@@ -203,13 +209,13 @@ html, body{
    font-size: 1rem; 
    font-weight: 500; 
    text-decoration: none; 
-   color: whitesmoke; 
+   color: variables.$color-principal; 
    background-color: transparent; 
    letter-spacing: 0.03em; 
 
    line-height: 1.2; 
 
-   border: 2px solid rgba(245,245,245,0.7); 
+   border: 2px solid variables.$color-principal; 
    border-radius: 2px; 
 
    cursor: pointer; 
@@ -227,9 +233,9 @@ html, body{
     -webkit-tap-highlight-color: transparent; 
 
     &:hover{ 
-    color: #00ff9d; 
-    border-color: #00ff9d; 
-    box-shadow: 0 0 12px rgba(0, 255, 157, 0.45) ; 
+    color: variables.$color-acento; 
+    border-color: variables.$color-acento; 
+    box-shadow: 0 0 12px rgba(74, 251, 151, 0.4) ; 
      transform: translateY(-1px); 
 
 } 
@@ -240,8 +246,8 @@ html, body{
 
   &:active {
     background-color: transparent;
-    color: #00ff9d;
-    border-color: #00ff9d;
+    color: variables.$color-acento;
+    border-color: variables.$color-acento;
     box-shadow: none;
     transform: translateY(0);
   }
@@ -298,9 +304,9 @@ h2{
         margin-top: 80px; 
         padding: 12px 28px;
         font-size: 1rem; 
-        color: whitesmoke; 
-        background-color: rgba(0,0,0,0.5); 
-        border: 2px solid whitesmoke; 
+        color: variables.$color-principal; 
+        background-color: transparent; 
+        border: 2px solid variables.$color-principal; 
         border-radius: 2px; 
         cursor: pointer; 
         width: fit-content; 
@@ -317,10 +323,10 @@ h2{
             &.focus,
             &:active { 
 
-                    color: #00ff9d; 
-                     background-color: #0a120f; 
-                     border-color: #00ff9d; 
-                    box-shadow:0 0 16px rgba(46, 249, 90, 0.7); 
+                    color: variables.$color-acento; 
+                     background-color: trans; 
+                     border-color: variables.$color-acento; 
+                    box-shadow:0 0 16px variables.$color-acento; 
                     transform: translateY(-2px); 
 
     }      
@@ -339,7 +345,7 @@ h2{
 
     p{ 
     text-align: center; 
-    color: whitesmoke ; 
+    color: variables.$color-principal ; 
     font-size: 1.2em; 
     font-weight: lighter; 
     font-family:"share tech mono" , sans-serif ; 
@@ -351,7 +357,7 @@ h2{
     .social-icons { 
     display: flex; 
     justify-content: center; 
-   gap: 1rem;
+    gap: 1rem;
     
     a{
         display: inline-flex;
@@ -445,7 +451,7 @@ h2{
 
     min-height: 100vh; 
 
-    background-color: rgba(0, 0, 0, 0.85); 
+    background-color: variables.$color-fondo; 
 
     background-image: linear-gradient( 
 
@@ -472,14 +478,14 @@ h2{
 
         h2{ 
         font-size: 2rem; 
-        color: whitesmoke; 
+        color: variables.$color-principal; 
         font-family: "Space Grotesk", sans-serif; 
         margin-bottom: 30px; 
             } 
          p { 
 
         font-size: 1.2rem; 
-        color: whitesmoke; 
+        color: variables.$color-principal; 
         font-weight: 400; 
          margin: 12px 0; 
          line-height: 1.6; 
@@ -487,7 +493,7 @@ h2{
             }  
 
             p.color{ 
-             color: #00ff6a;  
+             color: variables.$color-acento;  
              font-weight: 600; 
              }  
    } 
@@ -526,7 +532,7 @@ main .boton-scroll{
   font-size: 1.5rem; 
   font-weight: 300; 
   line-height: 1; 
-  color: #00ff6a; 
+  color: variables.$color-acento; 
   text-decoration: none; 
   cursor: pointer; 
   transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;  
@@ -602,7 +608,7 @@ main .boton-scroll{
         text-align: center; 
 
         h3{ 
-             color: whitesmoke; 
+             color: variables.$color-principal; 
              font-size: 2rem; 
              font-weight: 600; 
              margin: 60px 0; 
@@ -617,14 +623,14 @@ main .boton-scroll{
         justify-content: center; 
          gap: 1rem; 
          padding: 20px; 
-         border: 2px solid rgb(96, 244, 150); 
+         border: 2px solid variables.$color-acento; 
         background-color: rgba(0, 0, 0, 0.85); 
         transition: transform 0.3s ease, box-shadow 0.3s ease; 
         overflow: hidden; 
         position: relative; 
 
         h4{ 
-            color: whitesmoke; 
+            color: variables.$color-principal; 
             font-size: 1.5rem; 
             font-family: "Share Tech Mono" , sans-serif ; 
             text-align: center; 
@@ -636,7 +642,7 @@ main .boton-scroll{
 
             p{ 
             text-align: center; 
-              color: whitesmoke;   
+              color: variables.$color-principal;   
               font-family: "plus jakarta sans", sans-serif; 
                 font-size: 1rem;    
              font-weight: 400; 
@@ -694,7 +700,7 @@ main .boton-scroll{
 
 .pagina-contacto{ 
     min-height: 100vh; 
-    background-color: rgba(0, 0, 0, 0.85); 
+    background-color: variables.$color-fondo; 
     background-image: linear-gradient( 
         180deg, 
         rgba(0,0,0,0.6),  
@@ -712,7 +718,7 @@ main .boton-scroll{
 
             h2 { 
                 text-align: center; 
-                color:#00ff6a ; 
+                color:variables.$color-acento ; 
                 font-size: 2.5rem; 
                 font-weight: 600; 
                 margin: 20px 0 60px 0; 
@@ -722,7 +728,7 @@ main .boton-scroll{
             .contacto-texto { 
                 font-size: 1.3rem; 
                 font-family: "plus jakarta sans", sans-serif; 
-                color: whitesmoke; 
+                color: variables.$color-principal; 
                 margin-top: 30px; 
                 font-weight: 300; 
             
@@ -731,7 +737,7 @@ main .boton-scroll{
             .contacto-texto-negrita{ 
                 font-size: 1.3rem; 
                 font-family: "plus jakarta sans", sans-serif; 
-                color: #00ff6a; 
+                color: variables.$color-acento; 
                 margin: 30px 0; 
                 font-weight: 600; 
 
@@ -747,13 +753,13 @@ main .boton-scroll{
                 max-width: 700px; 
                 margin: 80px auto; 
                 padding: 60px; 
-                border:2px solid rgb(96, 244, 150) ; 
+                border:2px solid variables.$color-acento ; 
 
                 .form-grupo { 
                      margin-bottom: 60px; 
 
                      label{ 
-                        color: whitesmoke; 
+                        color: variables.$color-principal; 
                         font-size: 1.5rem; 
                         font-weight: 300; 
                         display: block; 
@@ -766,16 +772,16 @@ main .boton-scroll{
                     textarea{ 
                         width: 100%; 
                         padding: 12px; 
-                        color: whitesmoke; 
-                        border: 1px solid #00ff9d; 
+                        color: variables.$color-principal; 
+                        border: 1px solid variables.$color-acento; 
                         border-radius: 8px; 
                         font-size: 1.2rem; 
                         background-color: rgba(0, 0, 0, 0.85);  
                         font-family: "plus jakarta sans", sans-serif; 
                         &:focus{ 
                         outline: none; 
-                        border-color: #00ff9d; 
-                        box-shadow: 0 0 10px rgba(158, 237, 172, 0.4); 
+                        border-color: variables.$color-acento; 
+                        box-shadow: 0 0 10px variables.$color-acento; 
 
                     } 
                     } 
@@ -795,13 +801,13 @@ main .boton-scroll{
                         font-size: 1rem; 
                         font-weight: 500; 
                         text-decoration: none; 
-                        color: whitesmoke; 
+                        color: variables.$color-principal; 
                         background-color: transparent; 
                         letter-spacing: 0.03em; 
 
                         line-height: 1.2; 
 
-                        border: 2px solid rgba(245,245,245,0.7); 
+                        border: 2px solid variables.$color-principal; 
                         border-radius: 2px; 
 
                         cursor: pointer; 
@@ -819,9 +825,9 @@ main .boton-scroll{
                             -webkit-tap-highlight-color: transparent; 
 
                             &:hover{ 
-                            color: #00ff9d; 
-                            border-color: #00ff9d; 
-                            box-shadow: 0 0 12px rgba(0, 255, 157, 0.45) ; 
+                            color: variables.$color-acento; 
+                            border-color: variables.$color-acento; 
+                            box-shadow: 0 0 12px rgba(74, 251, 151, 0.4) ; 
                             transform: translateY(-1px); 
 
                         } 
@@ -832,8 +838,8 @@ main .boton-scroll{
 
                         &:active {
                             background-color: transparent;
-                            color: #00ff9d;
-                            border-color: #00ff9d;
+                            color:variables.$color-acento ;
+                            border-color:variables.$color-acento ;
                             box-shadow: none;
                             transform: translateY(0);
                         }
@@ -867,7 +873,7 @@ main .boton-scroll{
                 max-width: 100%; 
                 border-width: 2px; 
                 border-radius: 6px; 
-                background-color: rgba(0,0,0,0.85);  
+                background-color: variables.$color-fondo;  
                 margin: 50px 0; 
 
                 .form-grupo { 
@@ -892,9 +898,9 @@ main .boton-scroll{
                         margin-top: 80px; 
                         padding: 12px 28px;
                         font-size: 1rem; 
-                        color: whitesmoke; 
-                        background-color: rgba(0,0,0,0.5); 
-                        border: 2px solid whitesmoke; 
+                        color: variables.$color-principal; 
+                        background-color: transparent; 
+                        border: 2px solid variables.$color-principal; 
                         border-radius: 2px; 
                         cursor: pointer; 
                         width: fit-content; 
@@ -910,10 +916,10 @@ main .boton-scroll{
                             &:hover,
                             &.focus,
                             &:active { 
-                                    color: #00ff9d; 
-                                    background-color: #0a120f; 
-                                    border-color: #00ff9d; 
-                                    box-shadow:0 0 16px rgba(46, 249, 90, 0.7); 
+                                    color: variables.$color-acento; 
+                                    background-color: transparent; 
+                                    border-color: variables.$color-acento; 
+                                    box-shadow:0 0 16px variables.$color-acento; 
                                     transform: translateY(-2px); 
 
                     }      
