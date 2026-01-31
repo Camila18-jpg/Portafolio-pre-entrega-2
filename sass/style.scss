@@ -27,7 +27,7 @@ html, body{
     content: "";
     position: fixed;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: -1;
     pointer-events: none;
   }
@@ -37,7 +37,7 @@ html, body{
 
     .pagina-principal { 
        & ::before{
-        background-color: rgba(0,0,0,0.4); 
+        background-color: rgba(0,0,0,0.6); 
         
         z-index: -1; 
         pointer-events: none; } 
@@ -262,12 +262,12 @@ html, body{
     .seccion-principal { 
         display: flex; 
         min-height: auto; 
-       padding: 30px 10px; 
+       padding: 0 10px; 
         justify-content: center;    
         align-items: center; 
         position: relative; 
         z-index: 1; 
-        margin-right: 0;
+        margin: 60px 0 0 0;
 
          .contenido-principal { 
         display: flex; 
@@ -536,6 +536,11 @@ main .boton-scroll{
   text-decoration: none; 
   cursor: pointer; 
   transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;  
+//   animacion de Animate.css
+animation-name: bounce;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+
 
 } 
 
