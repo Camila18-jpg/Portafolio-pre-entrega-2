@@ -1,3 +1,11 @@
+.base {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 420px;
+  align-items: center;
+}
+
 /* reset */
 * {
   margin: 0;
@@ -112,7 +120,7 @@ header .navbar-custom .navbar-toggler {
 .seccion-principal {
   min-height: calc(100vh - 80px);
   display: flex;
-  text-align: right;
+  text-align: center;
   justify-content: flex-end;
   align-items: flex-end;
   position: relative;
@@ -147,13 +155,13 @@ header .navbar-custom .navbar-toggler {
   color: whitesmoke;
   font-family: "plus jakarta sans", sans-serif;
 }
-.seccion-principal .btn {
+.seccion-principal .btn-inicio {
   display: inline-block;
-  padding: 10px 28px;
-  margin: 60px 0;
   width: fit-content;
   position: relative;
   z-index: 1;
+  padding: 12px 24px;
+  margin-top: 50px;
   font-family: "plus jakarta sans", sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -168,17 +176,17 @@ header .navbar-custom .navbar-toggler {
   transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
   -webkit-tap-highlight-color: transparent;
 }
-.seccion-principal .btn:hover {
+.seccion-principal .btn-inicio:hover {
   color: #00ff9d;
   border-color: #00ff9d;
   box-shadow: 0 0 12px rgba(74, 251, 151, 0.4);
   transform: translateY(-1px);
 }
-.seccion-principal .btn:focus-visible {
+.seccion-principal .btn-inicio:focus-visible {
   outline: none;
   box-shadow: 0 0 2px rgba(74, 251, 151, 0.4);
 }
-.seccion-principal .btn:active {
+.seccion-principal .btn-inicio:active {
   background-color: transparent;
   color: #00ff9d;
   border-color: #00ff9d;
@@ -200,7 +208,6 @@ header .navbar-custom .navbar-toggler {
   .seccion-principal .contenido-principal {
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
     max-width: 420px;
     justify-content: center;
@@ -217,7 +224,7 @@ header .navbar-custom .navbar-toggler {
     line-height: 1.3;
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
   }
-  .btn {
+  .btn-inicio {
     display: flex;
     margin-top: 80px;
     padding: 12px 28px;
@@ -232,7 +239,7 @@ header .navbar-custom .navbar-toggler {
     z-index: 2; /* sobre overlay */
     transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
   }
-  .btn:hover, .btn.focus, .btn:active {
+  .btn-inicio:hover, .btn-inicio.focus, .btn-inicio:active {
     color: #00ff9d;
     background-color: trans;
     border-color: #00ff9d;
@@ -568,7 +575,7 @@ main .boton-scroll {
   border-color: #00ff9d;
   box-shadow: 0 0 10px #00ff9d;
 }
-.contacto .form-contacto .btn {
+.contacto .form-contacto .btn-formulario {
   display: inline-block;
   padding: 10px 28px;
   margin: 60px 0;
@@ -589,17 +596,17 @@ main .boton-scroll {
   transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
   -webkit-tap-highlight-color: transparent;
 }
-.contacto .form-contacto .btn:hover {
+.contacto .form-contacto .btn-formulario:hover {
   color: #00ff9d;
   border-color: #00ff9d;
   box-shadow: 0 0 12px rgba(74, 251, 151, 0.4);
   transform: translateY(-1px);
 }
-.contacto .form-contacto .btn:focus-visible {
+.contacto .form-contacto .btn-formulario:focus-visible {
   outline: none;
   box-shadow: 0 0 2px rgba(74, 251, 151, 0.4);
 }
-.contacto .form-contacto .btn:active {
+.contacto .form-contacto .btn-formulario:active {
   background-color: transparent;
   color: #00ff9d;
   border-color: #00ff9d;
@@ -640,7 +647,7 @@ main .boton-scroll {
     padding: 10px;
     font-size: 1rem;
   }
-  .contacto .form-contacto .btn {
+  .contacto .form-contacto .btn-formulario {
     display: flex;
     margin-top: 80px;
     padding: 12px 28px;
@@ -655,7 +662,7 @@ main .boton-scroll {
     z-index: 2; /* sobre overlay */
     transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
   }
-  .contacto .form-contacto .btn:hover, .contacto .form-contacto .btn.focus, .contacto .form-contacto .btn:active {
+  .contacto .form-contacto .btn-formulario:hover, .contacto .form-contacto .btn-formulario.focus, .contacto .form-contacto .btn-formulario:active {
     color: #00ff9d;
     background-color: transparent;
     border-color: #00ff9d;

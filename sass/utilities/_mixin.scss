@@ -1,24 +1,23 @@
 // mixin con parametros
 
-@mixin medidas ($padding, $margin, $color) {
+@mixin boton-estilos ($padding, $bg-color) {
     padding: $padding;
-    margin: $margin;
-    color: $color;
+    background-color: $bg-color;
    
 }
 
 // mixin sin parametros
 
-@mixin base{
+.base{
     display: flex; 
 
     flex-direction: column; 
 
-    text-align: right; 
+    text-align: center; 
 
-    max-width: 500px; 
+    max-width: 420px; 
 
-    align-items: flex-end; 
+    align-items: center; 
 
      
 }
@@ -28,7 +27,6 @@
 
     font-weight: 300; 
 
-    color: whitesmoke ; 
 
     margin: 40px 0 20px 0; 
 
