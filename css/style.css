@@ -498,7 +498,7 @@ body.pagina-sobre-mi{
   font-weight: 300;
   line-height: 1;
 
-  color: #00ff6a;
+  color: #00ff9d;
   text-decoration: none;
 
 
@@ -856,21 +856,19 @@ body.pagina-contacto{
 
 .proyectos{
     display: grid;
-    grid-template-columns:repeat(2, 1fr);
+    grid-template-columns:repeat(1, 1fr);
     gap: 1rem;
+    justify-items: center;
 
     max-width: 1200px;
     margin: 0 auto;
     
 
 }
-.proyectos .proyectos-titulo,
-.proyectos .btn{
-    margin: 40px 0 60px;
-    grid-column:1 / -1 ;
-    justify-self: center;
 
-      
+.proyectos .proyectos-titulo{
+    margin: 40px 0 80px 0;
+    grid-column:1 / -1 ;     
 }
 
 .proyectos .proyectos-titulo h2{
@@ -879,66 +877,88 @@ body.pagina-contacto{
     font-family: "Space Grotesk", sans-serif;
     text-transform: uppercase;
     text-shadow: 0 0 6px rgba(0,0,0,0.3);
-    padding: 60px 0 20px 0;
     text-align: center;
+    margin: 40px 0 60px 0;
    
 }
-
-.proyectos .proyectos-titulo h3{
-    color: #00ff9d;
-    font-size: 1.5rem;
-    font-weight: 400;
-    font-family: "plus jakarta sans", sans-serif;
-    margin:80px 0;
-    text-align: center;
-   
-}
-
-.proyectos .proyectos-descripcion{
-    text-align: center;
-}
-
-.proyectos .proyectos-descripcion h4{
-    color:whitesmoke ;
-    font-size: 1.5rem;
-    font-weight: 600;
-    font-family:"plus jakarta sans", sans-serif  ;
-   
-    margin: 20px 0 40px 0;
-
-}
-.proyectos .proyectos-descripcion h5{
-    color:whitesmoke ;
+.proyectos .proyectos-titulo p{
     font-size: 1.2rem;
+    color: whitesmoke;
     font-weight: 600;
-    font-family:"plus jakarta sans", sans-serif  ;
-    margin: 20px 0;
     
+    text-align: center;
+    margin: 12px 0;
+    line-height: 1.6;
+     
+     
+     font-family: "plus jakarta sans", sans-serif;
+}
+.proyectos .proyectos-titulo p.color{
+   color: #00ff9d; 
+   font-weight: 600;
+ } 
+.proyectos .proyectos-imagen{
+    position: relative;
+     
+}
 
-}
-.proyectos .proyectos-descripcion p{
-    color:whitesmoke ;
-    font-size: 1rem;
-    font-weight: 400;
-    font-family:"plus jakarta sans", sans-serif  ;
-    
-
-}
-.proyectos .proyectos-imagen {
-  justify-self: left;
-  
-   
-}
 .proyectos .proyectos-imagen img{
-   width: 100%;
+    display: block;
+    margin-inline: auto;
+   width: auto;
    max-width: 380px;
    height: auto;
-   border: 2px solid #2c4a39;
+   border: 2px solid rgb(137, 234, 190);
    border-radius: 12px;
-  
+   opacity: 0.85;
    
 }
 
+.proyectos .proyectos-overlay{
+    display: flex;
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    border-radius: 12px;
+}
+
+.proyectos .proyectos-overlay h3{
+font-size: 1.5rem;
+font-weight: 600;
+margin-bottom: 20px;
+font-family: "plus jakarta sans", sans-serif;
+letter-spacing: 1px;
+text-transform: uppercase;
+}
+
+.proyectos .proyectos-overlay p{
+font-size: 1rem;
+font-weight: 400;
+font-family: "plus jakarta sans" sans-serif;
+opacity: 0.85;
+}
+/* hover-overlay */
+
+@media(hover: hover){
+.proyectos .proyectos-imagen:hover .proyectos-overlay{
+    opacity: 1;
+    pointer-events: auto;
+}
+}
+
+.proyectos .btn{
+    margin: 80px 0;
+    grid-column:1 / -1 ;     
+}
 
 @media (max-width: 991.98px) {
 .proyectos{
