@@ -14,6 +14,8 @@ html, body{
 
 // fondo principal
     .pagina-principal{ 
+    display: flex;
+    flex-direction: column;
     position: relative; 
     background-image: url(../images/fondo.webp); 
    
@@ -36,8 +38,12 @@ html, body{
 @media (max-width: 991.98px) { 
 
     .pagina-principal { 
+        
+
        & ::before{
         background-color: rgba(0,0,0,0.6); 
+        position: absolute;
+        inset: 0;
         
         z-index: -1; 
         pointer-events: none; } 
@@ -152,9 +158,9 @@ html, body{
 // main
 
      .seccion-principal { 
-    min-height:  calc(100vh - 80px); 
+    min-height:  100vh; 
     display: flex; 
-    
+    flex: 1;
     text-align: center;
     justify-content: flex-end;
     align-items: flex-end;
@@ -183,12 +189,19 @@ html, body{
     font-weight: 600; 
     color:variables.$color-principal; 
     font-family: "plus jakarta sans", sans-serif; 
-    margin: 40px 0 20px 0; 
+    margin: 40px 0; 
 } 
 
         p { 
     font-size: 1.2rem; 
     font-weight: 400; 
+    color: variables.$color-principal; 
+    font-family: "plus jakarta sans", sans-serif; 
+
+    } 
+    .bolder{ 
+    font-size: 1.2rem; 
+    font-weight: 600; 
     color: variables.$color-principal; 
     font-family: "plus jakarta sans", sans-serif; 
 
@@ -258,20 +271,22 @@ html, body{
  
     .seccion-principal { 
         display: flex; 
-        min-height: auto; 
-       padding: 0 10px; 
+        min-height: 100vh; 
+       padding: 60px 10px 0; 
+       max-width: 100%;
         justify-content: center;    
         align-items: center; 
-        position: relative; 
-        z-index: 1; 
-        margin: 60px 0 0 0;
+        margin-right: 0;
+       
+       
 
          .contenido-principal {  
             display: flex;
             flex-direction: column;
             text-align: center;
-            max-width: 420px;
+            max-width: 100%;
              justify-content: center; 
+             align-items: center;
          
 
 h2{ 
@@ -335,7 +350,7 @@ h2{
  footer { 
     
    justify-content: center; 
-    margin-top: 100px; 
+    margin-top: 0; 
     padding: 50px; 
     position: relative; 
     z-index: 1; 
@@ -720,7 +735,7 @@ animation-iteration-count: infinite;
 
             h2 { 
                 text-align: center; 
-                color:variables.$color-acento ; 
+                color:variables.$color-principal; 
                 font-size: 2.5rem; 
                 font-weight: 600; 
                 margin: 20px 0 60px 0; 

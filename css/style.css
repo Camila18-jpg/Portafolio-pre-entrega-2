@@ -19,6 +19,8 @@ html, body {
 }
 
 .pagina-principal {
+  display: flex;
+  flex-direction: column;
   position: relative;
   background-image: url(../images/fondo.webp);
   background-size: cover;
@@ -39,6 +41,8 @@ html, body {
 @media (max-width: 991.98px) {
   .pagina-principal ::before {
     background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    inset: 0;
     z-index: -1;
     pointer-events: none;
   }
@@ -118,8 +122,9 @@ header .navbar-custom .navbar-toggler {
   }
 }
 .seccion-principal {
-  min-height: calc(100vh - 80px);
+  min-height: 100vh;
   display: flex;
+  flex: 1;
   text-align: center;
   justify-content: flex-end;
   align-items: flex-end;
@@ -147,11 +152,17 @@ header .navbar-custom .navbar-toggler {
   font-weight: 600;
   color: whitesmoke;
   font-family: "plus jakarta sans", sans-serif;
-  margin: 40px 0 20px 0;
+  margin: 40px 0;
 }
 .seccion-principal .contenido-principal p {
   font-size: 1.2rem;
   font-weight: 400;
+  color: whitesmoke;
+  font-family: "plus jakarta sans", sans-serif;
+}
+.seccion-principal .contenido-principal .bolder {
+  font-size: 1.2rem;
+  font-weight: 600;
   color: whitesmoke;
   font-family: "plus jakarta sans", sans-serif;
 }
@@ -197,20 +208,20 @@ header .navbar-custom .navbar-toggler {
 @media (max-width: 991.98px) {
   .seccion-principal {
     display: flex;
-    min-height: auto;
-    padding: 0 10px;
+    min-height: 100vh;
+    padding: 60px 10px 0;
+    max-width: 100%;
     justify-content: center;
     align-items: center;
-    position: relative;
-    z-index: 1;
-    margin: 60px 0 0 0;
+    margin-right: 0;
   }
   .seccion-principal .contenido-principal {
     display: flex;
     flex-direction: column;
     text-align: center;
-    max-width: 420px;
+    max-width: 100%;
     justify-content: center;
+    align-items: center;
   }
   .seccion-principal .contenido-principal h2 {
     font-size: 2rem;
@@ -250,7 +261,7 @@ header .navbar-custom .navbar-toggler {
 /* estilos del footer */
 footer {
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 0;
   padding: 50px;
   position: relative;
   z-index: 1;
@@ -517,7 +528,7 @@ main .boton-scroll {
 }
 .contacto .contacto-titulo h2 {
   text-align: center;
-  color: #00ff9d;
+  color: whitesmoke;
   font-size: 2.5rem;
   font-weight: 600;
   margin: 20px 0 60px 0;
