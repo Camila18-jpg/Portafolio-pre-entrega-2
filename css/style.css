@@ -20,7 +20,7 @@ html, body {
 
 .pagina-principal {
   position: relative;
-  background-image: url(../images/fondo.png);
+  background-image: url(../images/fondo.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -478,7 +478,7 @@ main .boton-scroll {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url(../images/fondo.png);
+  background-image: url(../images/fondo.webp);
   background-size: cover;
   background-position: center;
   opacity: 0;
@@ -486,7 +486,7 @@ main .boton-scroll {
   z-index: 0;
 }
 .contenedor-grid .contenido:hover::before {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 @media (max-width: 991.98px) {
@@ -538,16 +538,26 @@ main .boton-scroll {
   font-weight: 600;
 }
 .contacto .form-contacto {
-  background-image: url(../images/fondo.png);
+  background-image: url(../images/fondo.webp);
   background-size: cover;
-  opacity: 0.9;
   max-width: 700px;
   margin: 80px auto;
   padding: 60px;
   border: 2px solid #00ff9d;
+  position: relative;
+  z-index: 0;
+}
+.contacto .form-contacto::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
 }
 .contacto .form-contacto .form-grupo {
   margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
 }
 .contacto .form-contacto .form-grupo label {
   color: whitesmoke;
