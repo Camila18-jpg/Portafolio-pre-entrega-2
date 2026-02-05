@@ -39,7 +39,7 @@ html, body {
 }
 
 @media (max-width: 991.98px) {
-  .pagina-principal ::before {
+  .pagina-principal::before {
     background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
     inset: 0;
@@ -127,16 +127,16 @@ header .navbar-custom .navbar-toggler {
   flex: 1;
   text-align: center;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
   position: relative;
   z-index: 1;
-  margin-right: 50px;
 }
 .seccion-principal .contenido-principal {
   display: flex;
   flex-direction: column;
   text-align: right;
-  max-width: 500px;
+  margin-right: 30px;
+  max-width: 400px;
   align-items: flex-end;
 }
 .seccion-principal .contenido-principal h2 {
@@ -149,14 +149,14 @@ header .navbar-custom .navbar-toggler {
 }
 .seccion-principal .contenido-principal h3 {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
   color: whitesmoke;
   font-family: "plus jakarta sans", sans-serif;
   margin: 40px 0;
 }
 .seccion-principal .contenido-principal p {
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 300;
   color: whitesmoke;
   font-family: "plus jakarta sans", sans-serif;
 }
@@ -208,12 +208,12 @@ header .navbar-custom .navbar-toggler {
 @media (max-width: 991.98px) {
   .seccion-principal {
     display: flex;
-    min-height: 100vh;
-    padding: 60px 10px 0;
+    flex-direction: column;
+    min-height: 100svh;
+    padding: 20px 0;
     max-width: 100%;
     justify-content: center;
     align-items: center;
-    margin-right: 0;
   }
   .seccion-principal .contenido-principal {
     display: flex;
@@ -222,12 +222,14 @@ header .navbar-custom .navbar-toggler {
     max-width: 100%;
     justify-content: center;
     align-items: center;
+    margin-right: 0;
   }
   .seccion-principal .contenido-principal h2 {
     font-size: 2rem;
     font-weight: 400;
     line-height: 1.3;
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+    margin: 10px 0;
   }
   .seccion-principal .contenido-principal h3 {
     font-size: 1.5rem;
@@ -262,7 +264,7 @@ header .navbar-custom .navbar-toggler {
 footer {
   justify-content: center;
   margin-top: 0;
-  padding: 50px;
+  padding: 30px;
   position: relative;
   z-index: 1;
 }
@@ -303,7 +305,6 @@ footer .social-icons a:hover img {
 
 @media (max-width: 991.98px) {
   footer {
-    padding: 30px 20px;
     margin-top: 60px;
   }
   footer .social-icons {
@@ -394,6 +395,9 @@ main .boton-scroll {
 }
 
 @media (max-width: 991.98px) {
+  .pagina-sobre-mi {
+    min-height: auto;
+  }
   .sobre-mi {
     flex-direction: column;
     gap: 48px;
@@ -502,13 +506,23 @@ main .boton-scroll {
 
 @media (max-width: 991.98px) {
   .contenedor-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 320px);
     gap: 1rem;
-    margin-top: 80px;
+    margin: 60px auto 0;
     padding: 0 16px;
+    justify-content: center;
+    width: max-content;
+    max-width: 360px;
   }
   .contenedor-grid .contenido {
-    min-height: 220px;
+    min-height: auto;
+    width: 100%;
+  }
+  .contenedor-grid .contenido h4 {
+    font-size: 1.2rem;
+  }
+  .contenedor-grid .contenido p {
+    font-size: 0.95rem;
   }
 }
 .pagina-contacto {
@@ -636,6 +650,9 @@ main .boton-scroll {
 }
 
 @media (max-width: 991.98px) {
+  .pagina-contacto {
+    min-height: auto;
+  }
   .contacto {
     margin: 30px 20px;
   }
