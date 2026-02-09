@@ -444,7 +444,7 @@ body.pagina-sobre-mi{
     
 }
 .sobre-mi-texto h2 {
-    
+    font-weight: 600;
     font-size: 2rem;
     color: whitesmoke;
     font-family: "Space Grotesk", sans-serif;
@@ -504,6 +504,11 @@ body.pagina-sobre-mi{
 
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; 
+
+  /* animacion */
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
 /* media */
@@ -724,7 +729,7 @@ body.pagina-contacto{
 
 .contacto-titulo h2 {
     text-align: center;
-    color: #00ff9d;
+    color: whitesmoke;
     font-size: 2.5rem;
     font-weight: 600;
     margin: 20px 0 60px 0;
@@ -860,7 +865,7 @@ body.pagina-contacto{
     gap: 1rem;
     justify-items: center;
 
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     
 
@@ -875,19 +880,20 @@ body.pagina-contacto{
     color: whitesmoke;
     font-size: 2.5rem;
     font-family: "Space Grotesk", sans-serif;
-    text-transform: uppercase;
+    font-weight: 400;
+    
     text-shadow: 0 0 6px rgba(0,0,0,0.3);
     text-align: center;
     margin: 40px 0 60px 0;
    
 }
 .proyectos .proyectos-titulo p{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: whitesmoke;
-    font-weight: 600;
+    font-weight: 400;
     
     text-align: center;
-    margin: 12px 0;
+    margin: 30px 0;
     line-height: 1.6;
      
      
@@ -896,8 +902,10 @@ body.pagina-contacto{
 .proyectos .proyectos-titulo p.color{
    color: #00ff9d; 
    font-weight: 600;
+   font-size: 1.3rem;
  } 
 .proyectos .proyectos-imagen{
+    margin: 80px 0;
     position: relative;
      
 }
@@ -908,11 +916,12 @@ body.pagina-contacto{
    width: auto;
    max-width: 380px;
    height: auto;
-   border: 2px solid rgb(137, 234, 190);
+   border: 1px solid #00ff9d;
    border-radius: 12px;
    opacity: 0.85;
    
 }
+
 
 .proyectos .proyectos-overlay{
     display: flex;
@@ -929,6 +938,8 @@ body.pagina-contacto{
     pointer-events: none;
     transition: opacity 0.3s ease;
     border-radius: 12px;
+    padding: 5px;
+   
 }
 
 .proyectos .proyectos-overlay h3{
@@ -941,7 +952,8 @@ text-transform: uppercase;
 }
 
 .proyectos .proyectos-overlay p{
-font-size: 1rem;
+margin-top: 10px;
+font-size: 1.2rem;
 font-weight: 400;
 font-family: "plus jakarta sans" sans-serif;
 opacity: 0.85;
@@ -949,21 +961,26 @@ opacity: 0.85;
 /* hover-overlay */
 
 @media(hover: hover){
-.proyectos .proyectos-imagen:hover .proyectos-overlay{
+ .proyectos-imagen:hover .proyectos-overlay{
+    box-shadow:0 0 8px #00ff9d ;
     opacity: 1;
     pointer-events: auto;
-}
+        }
 }
 
+/* boton proyectos */
 .proyectos .btn{
     margin: 80px 0;
     grid-column:1 / -1 ;     
 }
+/* Proyectos Mobile */
 
 @media (max-width: 991.98px) {
 .proyectos{
     grid-template-columns: 1fr;
     gap: 2.5rem;   
+    max-width: 100%;
+    margin: 15px;
 }
 .proyectos .proyectos-titulo{
     margin: 30px 0;     
