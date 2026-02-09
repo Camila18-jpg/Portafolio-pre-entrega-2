@@ -61,12 +61,14 @@ html, body{
     z-index: 1000; 
         
      .navbar-custom .navbar-brand{ 
-
+     padding-top: 20px;
     color: variables.$color-principal; 
     letter-spacing: 0.5px; 
     font-size: 1.2rem; 
     font-weight: 200; 
     font-family: "Share Tech Mono", sans-serif; 
+    
+    
 } 
      .nav-link { 
 
@@ -77,11 +79,21 @@ html, body{
     font-family: "Share Tech Mono", sans-serif; 
     margin-left: 2rem; 
     line-height: 1.2; 
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    transition: 
+        border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+     
+        
+    &:hover { 
+        border: 2px solid variables.$color-acento
+       
+    }
 
+     
     &.active{ 
-
  background: linear-gradient( 90deg, 
-
         lch(53.23% 104.58 40), 
         #ee7272, 
         rgb(168, 165, 165))  ;    
@@ -92,14 +104,16 @@ html, body{
     font-weight: 600 
 
  } 
-     &:not(.active):hover{ 
-    color: whitesmoke; 
+     &:not(.active){ 
+    color: variables.$color-principal; 
 } 
+
+   
 } 
 
  
     .navbar-custom .navbar-toggler { 
-    border: 2px solid rgb(238, 246, 241); 
+    border: 2px solid variables.$color-principal; 
     padding: 0.25rem 0.5rem; 
 
         } 
@@ -123,8 +137,9 @@ html, body{
         flex-grow: 0; 
          flex-basis: auto; 
         border-radius: 8px; 
-        padding: 16px; 
-        background-color:rgba(0,0,0,0.85); ;     
+        padding: 5px;
+        background-color: rgba(0, 0, 0, 0.7);
+            
     } 
  
 
@@ -132,14 +147,19 @@ html, body{
         align-items: flex-end; 
         gap: 10px; 
         } 
+    
 
     .navbar-custom .nav-item { 
         width: 100%; 
         display: flex; 
         justify-content: flex-end; 
-        border: 2px solid rgb(96, 244, 150);  
+        border: 2px solid variables.$color-acento;
+
+        &:active{
+           box-shadow: 0 0 10px variables.$color-acento;
+        }
+    
     } 
- 
 
     .navbar-custom .nav-link { 
         min-width: 180px; 
@@ -148,21 +168,23 @@ html, body{
         padding: 10px 16px; 
         border-radius: 6px; 
         transition: background-color 0.25s ease, color 0.25s ease;    
+       &:hover { 
+        border: transparent;
+        box-shadow: none; 
+        
+       
 
+    }
     } 
 
 } 
-
-
-
 // main
-
      .seccion-principal { 
     min-height:  100vh; 
     display: flex; 
     flex: 1;
     text-align: center;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
    
     position: relative; 
@@ -171,10 +193,9 @@ html, body{
         .contenido-principal { 
             display: flex;
             flex-direction: column;
-            text-align: right;
-            margin-right: 30px;
-            max-width: 400px;
-            align-items: flex-end;
+            text-align: center;
+            max-width: 460px;
+            align-items: center;
     h2{
     font-size: 2.5rem; 
     font-weight: 300; 
@@ -185,13 +206,8 @@ html, body{
     text-shadow: 0 0 6px rgba(0,0,0,0.3);     
 }
 
-        h3 { 
-    font-size: 1.5rem; 
-    font-weight: 500; 
-    color:variables.$color-principal; 
-    font-family: "plus jakarta sans", sans-serif; 
-    margin: 40px 0; 
-} 
+    
+
 
         p { 
     font-size: 1.2rem; 
@@ -289,7 +305,7 @@ html, body{
             max-width: 100%;
              justify-content: center; 
              align-items: center;
-             margin-right: 0;
+             
          
 
 h2{ 
@@ -352,7 +368,7 @@ h2{
  
 /* estilos del footer */ 
  footer { 
-    
+    align-items: center;
    justify-content: center; 
     margin-top: 0; 
     padding: 30px; 
@@ -373,6 +389,7 @@ h2{
     .social-icons { 
     display: flex; 
     justify-content: center; 
+    align-items: center;
     gap: 1rem;
     
     a{

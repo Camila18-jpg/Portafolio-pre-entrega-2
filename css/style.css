@@ -53,6 +53,7 @@ header {
   z-index: 1000;
 }
 header .navbar-custom .navbar-brand {
+  padding-top: 20px;
   color: whitesmoke;
   letter-spacing: 0.5px;
   font-size: 1.2rem;
@@ -67,6 +68,12 @@ header .nav-link {
   font-family: "Share Tech Mono", sans-serif;
   margin-left: 2rem;
   line-height: 1.2;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  transition: border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+header .nav-link:hover {
+  border: 2px solid #00ff9d;
 }
 header .nav-link.active {
   background: linear-gradient(90deg, lch(53.23% 104.58 40deg), #ee7272, rgb(168, 165, 165));
@@ -76,11 +83,11 @@ header .nav-link.active {
   color: transparent;
   font-weight: 600;
 }
-header .nav-link:not(.active):hover {
+header .nav-link:not(.active) {
   color: whitesmoke;
 }
 header .navbar-custom .navbar-toggler {
-  border: 2px solid rgb(238, 246, 241);
+  border: 2px solid whitesmoke;
   padding: 0.25rem 0.5rem;
 }
 
@@ -99,8 +106,8 @@ header .navbar-custom .navbar-toggler {
     flex-grow: 0;
     flex-basis: auto;
     border-radius: 8px;
-    padding: 16px;
-    background-color: rgba(0, 0, 0, 0.85);
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
   }
   .navbar-custom .navbar-nav {
     align-items: flex-end;
@@ -110,7 +117,10 @@ header .navbar-custom .navbar-toggler {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    border: 2px solid rgb(96, 244, 150);
+    border: 2px solid #00ff9d;
+  }
+  .navbar-custom .nav-item:active {
+    box-shadow: 0 0 10px #00ff9d;
   }
   .navbar-custom .nav-link {
     min-width: 180px;
@@ -120,13 +130,17 @@ header .navbar-custom .navbar-toggler {
     border-radius: 6px;
     transition: background-color 0.25s ease, color 0.25s ease;
   }
+  .navbar-custom .nav-link:hover {
+    border: transparent;
+    box-shadow: none;
+  }
 }
 .seccion-principal {
   min-height: 100vh;
   display: flex;
   flex: 1;
   text-align: center;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   position: relative;
   z-index: 1;
@@ -134,10 +148,9 @@ header .navbar-custom .navbar-toggler {
 .seccion-principal .contenido-principal {
   display: flex;
   flex-direction: column;
-  text-align: right;
-  margin-right: 30px;
-  max-width: 400px;
-  align-items: flex-end;
+  text-align: center;
+  max-width: 460px;
+  align-items: center;
 }
 .seccion-principal .contenido-principal h2 {
   font-size: 2.5rem;
@@ -146,13 +159,6 @@ header .navbar-custom .navbar-toggler {
   font-family: "Share Tech Mono", sans-serif;
   text-transform: uppercase;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-}
-.seccion-principal .contenido-principal h3 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: whitesmoke;
-  font-family: "plus jakarta sans", sans-serif;
-  margin: 40px 0;
 }
 .seccion-principal .contenido-principal p {
   font-size: 1.2rem;
@@ -222,7 +228,6 @@ header .navbar-custom .navbar-toggler {
     max-width: 100%;
     justify-content: center;
     align-items: center;
-    margin-right: 0;
   }
   .seccion-principal .contenido-principal h2 {
     font-size: 2rem;
@@ -262,6 +267,7 @@ header .navbar-custom .navbar-toggler {
 }
 /* estilos del footer */
 footer {
+  align-items: center;
   justify-content: center;
   margin-top: 0;
   padding: 30px;
@@ -283,6 +289,7 @@ footer {
 footer .social-icons {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
 }
 footer .social-icons a {
