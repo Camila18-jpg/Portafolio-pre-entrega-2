@@ -206,7 +206,50 @@ html, body{
     text-shadow: 0 0 6px rgba(0,0,0,0.3);     
 }
 
+    .type{
+    display: inline-block;    
     
+}
+.type span {
+    display: inline-block; 
+    font-size: 1.5rem;   
+    font-family: "share tech mono", sans-serif;
+    font-weight: 500;
+    color: variables.$color-principal;
+    margin: 40px 0;
+    text-transform: uppercase;
+     overflow: hidden;
+     white-space: nowrap;
+     width: 0;
+     position: relative;
+
+     animation: typing 4.5s steps(31) 0.5s forwards;
+     &::after{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2px;
+        height: 100%;
+        background-color:  variables.$color-acento;
+
+        animation: blink 1.2s step-end infinite;
+}
+}
+@keyframes typing{
+    from{
+        width: 0;
+    }
+    to{
+        width: 31ch;
+    }
+}
+@keyframes blink {
+    50%{
+        opacity: 0;
+     }
+}
 
 
         p { 
@@ -214,6 +257,7 @@ html, body{
     font-weight: 300; 
     color: variables.$color-principal; 
     font-family: "plus jakarta sans", sans-serif; 
+    
 
     } 
     .bolder{ 
@@ -302,7 +346,7 @@ html, body{
             display: flex;
             flex-direction: column;
             text-align: center;
-            max-width: 100%;
+            max-width: 360px;
              justify-content: center; 
              align-items: center;
              
@@ -314,6 +358,11 @@ h2{
         line-height: 1.3; 
          text-shadow: 0 0 8px rgba(0,0,0,0.7);
          margin: 10px 0;
+    }
+
+    .type span { 
+        font-size: 1.2rem; 
+        margin: 20px 0;
     }
 
         

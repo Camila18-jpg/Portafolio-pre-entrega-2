@@ -160,6 +160,47 @@ header .navbar-custom .navbar-toggler {
   text-transform: uppercase;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
+.seccion-principal .contenido-principal .type {
+  display: inline-block;
+}
+.seccion-principal .contenido-principal .type span {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-family: "share tech mono", sans-serif;
+  font-weight: 500;
+  color: whitesmoke;
+  margin: 40px 0;
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  position: relative;
+  animation: typing 4.5s steps(31) 0.5s forwards;
+}
+.seccion-principal .contenido-principal .type span::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: #00ff9d;
+  animation: blink 1.2s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 31ch;
+  }
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
 .seccion-principal .contenido-principal p {
   font-size: 1.2rem;
   font-weight: 300;
@@ -225,7 +266,7 @@ header .navbar-custom .navbar-toggler {
     display: flex;
     flex-direction: column;
     text-align: center;
-    max-width: 100%;
+    max-width: 360px;
     justify-content: center;
     align-items: center;
   }
@@ -235,6 +276,10 @@ header .navbar-custom .navbar-toggler {
     line-height: 1.3;
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
     margin: 10px 0;
+  }
+  .seccion-principal .contenido-principal .type span {
+    font-size: 1.2rem;
+    margin: 20px 0;
   }
   .seccion-principal .contenido-principal h3 {
     font-size: 1.5rem;
