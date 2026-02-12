@@ -288,10 +288,12 @@ header .navbar-custom .navbar-toggler {
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
   }
   .btn-inicio {
+    text-decoration: none;
     display: flex;
     margin-top: 80px;
     padding: 12px 28px;
     font-size: 1rem;
+    font-family: "plus jakarta sans", sans-serif;
     color: whitesmoke;
     background-color: transparent;
     border: 2px solid whitesmoke;
@@ -304,9 +306,9 @@ header .navbar-custom .navbar-toggler {
   }
   .btn-inicio:hover, .btn-inicio.focus, .btn-inicio:active {
     color: #00ff9d;
-    background-color: trans;
+    background-color: transparent;
     border-color: #00ff9d;
-    box-shadow: 0 0 16px #00ff9d;
+    box-shadow: 0 0 6px #00ff9d;
     transform: translateY(-2px);
   }
 }
@@ -663,42 +665,28 @@ main .boton-scroll {
   box-shadow: 0 0 10px #00ff9d;
 }
 .contacto .form-contacto .btn-formulario {
-  display: inline-block;
-  padding: 10px 28px;
-  margin: 60px 0;
-  width: fit-content;
-  position: relative;
-  z-index: 1;
-  font-family: "plus jakarta sans", sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
   text-decoration: none;
+  display: flex;
+  margin-top: 80px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-family: "plus jakarta sans", sans-serif;
   color: whitesmoke;
   background-color: transparent;
-  letter-spacing: 0.03em;
-  line-height: 1.2;
   border: 2px solid whitesmoke;
   border-radius: 2px;
   cursor: pointer;
+  width: fit-content;
+  position: relative; /* importante */
+  z-index: 2; /* sobre overlay */
   transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
-  -webkit-tap-highlight-color: transparent;
 }
-.contacto .form-contacto .btn-formulario:hover {
+.contacto .form-contacto .btn-formulario:hover, .contacto .form-contacto .btn-formulario.focus, .contacto .form-contacto .btn-formulario:active {
   color: #00ff9d;
-  border-color: #00ff9d;
-  box-shadow: 0 0 12px rgba(74, 251, 151, 0.4);
-  transform: translateY(-1px);
-}
-.contacto .form-contacto .btn-formulario:focus-visible {
-  outline: none;
-  box-shadow: 0 0 2px rgba(74, 251, 151, 0.4);
-}
-.contacto .form-contacto .btn-formulario:active {
   background-color: transparent;
-  color: #00ff9d;
   border-color: #00ff9d;
-  box-shadow: none;
-  transform: translateY(0);
+  box-shadow: 0 0 6px #00ff9d;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 991.98px) {
@@ -737,28 +725,6 @@ main .boton-scroll {
     padding: 10px;
     font-size: 1rem;
   }
-  .contacto .form-contacto .btn-formulario {
-    display: flex;
-    margin-top: 80px;
-    padding: 12px 28px;
-    font-size: 1rem;
-    color: whitesmoke;
-    background-color: transparent;
-    border: 2px solid whitesmoke;
-    border-radius: 2px;
-    cursor: pointer;
-    width: fit-content;
-    position: relative; /* importante */
-    z-index: 2; /* sobre overlay */
-    transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
-  }
-  .contacto .form-contacto .btn-formulario:hover, .contacto .form-contacto .btn-formulario.focus, .contacto .form-contacto .btn-formulario:active {
-    color: #00ff9d;
-    background-color: transparent;
-    border-color: #00ff9d;
-    box-shadow: 0 0 16px #00ff9d;
-    transform: translateY(-2px);
-  }
 }
 .pagina-proyectos {
   min-height: 100vh;
@@ -777,6 +743,135 @@ main .boton-scroll {
 .proyectos .proyectos-titulo {
   margin: 40px 0;
   grid-column: 1/-1;
+}
+.proyectos .proyectos-titulo h2 {
+  color: whitesmoke;
+  font-size: 2.5rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin: 40px 0 60px 0;
+}
+.proyectos .proyectos-titulo p {
+  font-size: 1.3rem;
+  color: whitesmoke;
+  font-weight: 400;
+  text-align: center;
+  margin: 30px 0;
+  line-height: 1.6;
+  font-family: "plus jakarta sans", sans-serif;
+}
+.proyectos .proyectos-titulo p.color {
+  color: #00ff9d;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.proyectos .proyectos-imagen {
+  margin: 80px 0;
+  position: relative;
+}
+.proyectos .proyectos-imagen img {
+  display: block;
+  margin-inline: auto;
+  width: auto;
+  max-width: 380px;
+  height: auto;
+  border: 1px solid #00ff9d;
+  border-radius: 12px;
+  opacity: 0.85;
+}
+.proyectos .proyectos-overlay {
+  display: flex;
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: whitesmoke;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  border-radius: 12px;
+  padding: 5px;
+}
+.proyectos .proyectos-overlay h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-family: "plus jakarta sans", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.proyectos .proyectos-overlay p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: "plus jakarta sans" sans-serif;
+  opacity: 0.85;
+}
+@media (hover: hover) {
+  .proyectos .proyectos-imagen:hover .proyectos-overlay {
+    box-shadow: 0 0 8px #00ff9d;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+.proyectos .btn-proyectos {
+  display: flex;
+  text-decoration: none;
+  margin-top: 80px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-family: "plus jakarta sans", sans-serif;
+  color: whitesmoke;
+  background-color: transparent;
+  border: 2px solid whitesmoke;
+  border-radius: 2px;
+  cursor: pointer;
+  width: fit-content;
+  position: relative; /* importante */
+  z-index: 2; /* sobre overlay */
+  transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+}
+.proyectos .btn-proyectos:hover, .proyectos .btn-proyectos.focus, .proyectos .btn-proyectos:active {
+  color: #00ff9d;
+  background-color: transparent;
+  border-color: #00ff9d;
+  box-shadow: 0 0 6px #00ff9d;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 991.98px) {
+  .pagina-proyectos {
+    min-height: auto;
+  }
+  .proyectos {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    margin: 20px 0;
+  }
+  .proyectos .proyectos-titulo {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    text-align: center;
+  }
+  .proyectos .proyectos-titulo h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 30px 0;
+    padding: 20px;
+  }
+  .proyectos .proyectos-titulo p {
+    font-size: 1rem;
+    margin: 30px 0;
+  }
+  .proyectos .proyectos-titulo p.color {
+    font-size: 1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
