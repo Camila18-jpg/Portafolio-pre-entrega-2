@@ -42,7 +42,7 @@ html, body{
 
        &::before{
         background-color: rgba(0,0,0,0.6); 
-        position: absolute;
+        position: fixed;
         inset: 0;
         
         z-index: -1; 
@@ -1049,4 +1049,27 @@ animation-iteration-count: infinite;
     } 
 
 
+}
+
+// Proyectos
+.pagina-proyectos{ 
+    min-height: 100vh; 
+    background-color: variables.$color-fondo; 
+    background-image: linear-gradient( 
+        180deg, 
+        rgba(0,0,0,0.6),  
+        rgba(0,0,0,0.95) ); 
+} 
+.proyectos{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 1rem;
+    justify-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+
+    .proyectos-titulo{
+        margin: 40px 0;
+        grid-column:1/ -1;  
+    }
 }
