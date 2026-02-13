@@ -77,7 +77,10 @@
           <!-- formulario -->   
         
         <section id="formulario" class="form-contacto">   
-            <form action="/submit"  method="post">
+            <form name="contacto"  method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="">
+              <input type="hidden" name="form-name" value="contacto">
+              <input type="hidden" name="bot-field">
+              
     <div class="form-grupo">
        <label for="nombre"> Nombre:</label>
         <input type="text" id="nombre" name="nombre" required placeholder="tu nombre" autocomplete="given-name">
