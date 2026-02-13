@@ -751,24 +751,26 @@ main .boton-scroll {
   font-weight: 400;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
   text-align: center;
-  margin: 40px 0 60px 0;
+  margin: 40px 0;
+  line-height: 1.5;
 }
 .proyectos .proyectos-titulo p {
   font-size: 1.3rem;
   color: whitesmoke;
   font-weight: 400;
   text-align: center;
-  margin: 30px 0;
-  line-height: 1.6;
+  margin: 20px 0;
+  line-height: 1.5;
   font-family: "plus jakarta sans", sans-serif;
 }
 .proyectos .proyectos-titulo p.color {
   color: #00ff9d;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1.3rem;
+  line-height: 1.5;
 }
 .proyectos .proyectos-imagen {
-  margin: 80px 0;
+  margin: 50px 0;
   position: relative;
 }
 .proyectos .proyectos-imagen img {
@@ -779,7 +781,7 @@ main .boton-scroll {
   height: auto;
   border: 1px solid #00ff9d;
   border-radius: 12px;
-  opacity: 0.85;
+  opacity: 1;
 }
 .proyectos .proyectos-overlay {
   display: flex;
@@ -809,20 +811,21 @@ main .boton-scroll {
   margin-top: 10px;
   font-size: 1.2rem;
   font-weight: 400;
-  font-family: "plus jakarta sans" sans-serif;
+  font-family: "plus jakarta sans", sans-serif;
   opacity: 0.85;
 }
 @media (hover: hover) {
   .proyectos .proyectos-imagen:hover .proyectos-overlay {
-    box-shadow: 0 0 8px #00ff9d;
+    box-shadow: 0 0 6px #00ff9d;
     opacity: 1;
     pointer-events: auto;
   }
 }
 .proyectos .btn-proyectos {
   display: flex;
+  grid-column: 1/-1;
   text-decoration: none;
-  margin-top: 80px;
+  margin: 50px 0 80px 0;
   padding: 12px 28px;
   font-size: 1rem;
   font-family: "plus jakarta sans", sans-serif;
@@ -849,28 +852,52 @@ main .boton-scroll {
     min-height: auto;
   }
   .proyectos {
-    grid-template-columns: 1fr;
-    max-width: 300px;
-    margin: 20px 0;
+    width: min(90%, 360px);
+    margin: 20px auto;
   }
   .proyectos .proyectos-titulo {
-    text-align: center;
     margin: 20px 0;
-    padding: 10px;
-    text-align: center;
   }
   .proyectos .proyectos-titulo h2 {
-    text-align: center;
     font-size: 1.5rem;
     margin: 30px 0;
-    padding: 20px;
   }
   .proyectos .proyectos-titulo p {
     font-size: 1rem;
-    margin: 30px 0;
+    margin: 10px 0;
   }
   .proyectos .proyectos-titulo p.color {
     font-size: 1rem;
+  }
+  .proyectos .proyectos-imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+  }
+  .proyectos .proyectos-imagen img {
+    width: 100%;
+    max-width: 280px;
+    opacity: 1;
+  }
+  .proyectos .proyectos-overlay {
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+    background: transparent;
+    margin: 20px auto 0 auto;
+    max-width: 280px;
+  }
+  .proyectos .proyectos-overlay h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  .proyectos .proyectos-overlay p {
+    margin-top: 0;
+    font-size: 1rem;
+  }
+  .proyectos .btn-proyectos {
+    margin: 30px 0 60px 0;
   }
 }
 
