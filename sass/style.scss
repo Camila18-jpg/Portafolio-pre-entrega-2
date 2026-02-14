@@ -905,6 +905,21 @@ animation-iteration-count: infinite;
                     } 
                     } 
                             }   
+     
+                                  input:-webkit-autofill,
+                                input:-webkit-autofill:hover,
+                                input:-webkit-autofill:focus,
+                                textarea:-webkit-autofill,
+                                textarea:-webkit-autofill:hover,
+                                textarea:-webkit-autofill:focus {
+                                    
+                                    -webkit-box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.85) inset;
+                                    -webkit-text-fill-color: variables.$color-principal;
+                                    transition: background-color 5000s ease-in-out 0s;
+                                }   
+                                 
+}   
+               
                             
         // boton
          .btn-formulario { 
@@ -944,7 +959,7 @@ animation-iteration-count: infinite;
  
 
             } 
-} 
+ 
 
 // contacto mobile
 
