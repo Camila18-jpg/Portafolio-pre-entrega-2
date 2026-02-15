@@ -139,33 +139,25 @@ header .navbar-custom .navbar-toggler {
   min-height: 100vh;
   display: flex;
   flex: 1;
-  text-align: center;
+  text-align: left;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
   z-index: 1;
 }
 .seccion-principal .contenido-principal {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  max-width: 460px;
-  align-items: center;
-}
-.seccion-principal .contenido-principal h2 {
-  font-size: 2.5rem;
-  font-weight: 300;
-  color: whitesmoke;
-  font-family: "Share Tech Mono", sans-serif;
-  text-transform: uppercase;
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  max-width: 850px;
+  align-items: flex-start;
 }
 .seccion-principal .contenido-principal .type {
   display: inline-block;
 }
 .seccion-principal .contenido-principal .type span {
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: "share tech mono", sans-serif;
   font-weight: 500;
   color: whitesmoke;
@@ -175,7 +167,7 @@ header .navbar-custom .navbar-toggler {
   white-space: nowrap;
   width: 0;
   position: relative;
-  animation: typing 4.5s steps(31) 0.5s forwards;
+  animation: typing 4.5s steps(31) 0.3s forwards;
 }
 .seccion-principal .contenido-principal .type span::after {
   content: "";
@@ -185,7 +177,7 @@ header .navbar-custom .navbar-toggler {
   transform: translateY(-50%);
   width: 2px;
   height: 100%;
-  background-color: #00ff9d;
+  background-color: whitesmoke;
   animation: blink 1.2s step-end infinite;
 }
 @keyframes typing {
@@ -201,34 +193,45 @@ header .navbar-custom .navbar-toggler {
     opacity: 0;
   }
 }
-.seccion-principal .contenido-principal p {
-  font-size: 1.2rem;
-  font-weight: 300;
+.seccion-principal .contenido-principal h2 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
   color: whitesmoke;
-  font-family: "plus jakarta sans", sans-serif;
+  font-family: "Plus jakarta sans", sans-serif;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  margin: 30px 0;
+  line-height: 1.1;
 }
-.seccion-principal .contenido-principal .bolder {
-  font-size: 1.2rem;
+.seccion-principal .contenido-principal p {
+  font-size: 1.5rem;
   font-weight: 600;
   color: whitesmoke;
   font-family: "plus jakarta sans", sans-serif;
+  max-width: 650px;
+}
+.seccion-principal .contenido-principal .tecnologias {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: whitesmoke;
+  font-family: "plus jakarta sans", sans-serif;
+  margin: 30px 0 20px 0;
 }
 .seccion-principal .btn-inicio {
   display: inline-block;
   width: fit-content;
   position: relative;
   z-index: 1;
-  padding: 12px 24px;
+  padding: 14px 28px;
   margin-top: 50px;
   font-family: "plus jakarta sans", sans-serif;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   color: whitesmoke;
   background-color: transparent;
   letter-spacing: 0.03em;
   line-height: 1.2;
-  border: 2px solid whitesmoke;
+  border: 3px solid whitesmoke;
   border-radius: 2px;
   cursor: pointer;
   transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
@@ -256,11 +259,11 @@ header .navbar-custom .navbar-toggler {
   .seccion-principal {
     display: flex;
     flex-direction: column;
-    min-height: 100svh;
-    padding: 20px 0;
-    max-width: 100%;
+    min-height: auto;
+    padding: 20px 10px;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
   .seccion-principal .contenido-principal {
     display: flex;
@@ -271,20 +274,24 @@ header .navbar-custom .navbar-toggler {
     align-items: center;
   }
   .seccion-principal .contenido-principal h2 {
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 1.3;
+    font-weight: 800;
+    line-height: 1.1;
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
-    margin: 10px 0;
+    margin: 10px 0 20px 0;
   }
   .seccion-principal .contenido-principal .type span {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 20px 0;
   }
-  .seccion-principal .contenido-principal h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 1.3;
+  .seccion-principal .contenido-principal p {
+    max-width: 300px;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+  }
+  .seccion-principal .contenido-principal .tecnologias {
+    font-size: 1rem;
+    line-height: 1.2;
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
   }
   .btn-inicio {
@@ -387,8 +394,8 @@ footer .social-icons a:hover img {
 .sobre-mi {
   display: flex;
   align-items: center;
-  gap: 80px;
-  padding: 100px 60px 0;
+  gap: 4rem;
+  margin: 50px 0;
   justify-content: center;
 }
 .sobre-mi .sobre-mi-texto {
@@ -397,22 +404,19 @@ footer .social-icons a:hover img {
   text-align: left;
 }
 .sobre-mi .sobre-mi-texto h2 {
-  font-size: 2rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   color: whitesmoke;
-  font-family: "Space Grotesk", sans-serif;
-  margin-bottom: 30px;
-}
-.sobre-mi .sobre-mi-texto p {
-  font-size: 1.2rem;
-  color: whitesmoke;
-  font-weight: 400;
-  margin: 12px 0;
-  line-height: 1.6;
+  font-weight: 800;
+  margin: 10px 0;
+  line-height: 1.2;
   font-family: "plus jakarta sans", sans-serif;
 }
-.sobre-mi .sobre-mi-texto p.color {
-  color: #00ff9d;
-  font-weight: 600;
+.sobre-mi .sobre-mi-texto p {
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  color: whitesmoke;
+  font-weight: 400;
+  line-height: 1.6;
+  font-family: "plus jakarta sans", sans-serif;
 }
 .sobre-mi .sobre-mi-imagen img {
   display: block;
@@ -454,23 +458,21 @@ main .boton-scroll {
   }
   .sobre-mi {
     flex-direction: column;
-    gap: 48px;
-    padding: 80px 24px 0;
+    gap: 2rem;
+    margin: 20px 0;
+    padding: 0 20px;
   }
   .sobre-mi .sobre-mi-texto {
-    max-width: 520px;
+    max-width: 360px;
     text-align: center;
     margin: 0 auto;
   }
   .sobre-mi .sobre-mi-texto h2 {
     text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 24px;
   }
   .sobre-mi .sobre-mi-texto p {
-    font-size: 1rem;
-    line-height: 1.7;
-    margin: 16px 0;
+    line-height: 1.5;
+    margin: 20px 0;
     text-align: center;
     letter-spacing: 0.5px;
   }
@@ -503,9 +505,9 @@ main .boton-scroll {
 }
 .contenedor-grid .titulo h3 {
   color: whitesmoke;
-  font-size: 2rem;
-  font-weight: 600;
-  margin: 60px 0;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  font-weight: 700;
+  margin: 40px 0;
   font-family: "Space Grotesk", sans-serif;
 }
 .contenedor-grid .contenido {
@@ -515,7 +517,7 @@ main .boton-scroll {
   gap: 1rem;
   padding: 20px;
   border: 2px solid #00ff9d;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: transparent;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   position: relative;
@@ -526,7 +528,7 @@ main .boton-scroll {
   font-family: "Share Tech Mono", sans-serif;
   text-align: center;
   padding-bottom: 10px;
-  font-weight: 400;
+  font-weight: 600;
   z-index: 1;
   position: relative;
 }
@@ -534,28 +536,24 @@ main .boton-scroll {
   text-align: center;
   color: whitesmoke;
   font-family: "plus jakarta sans", sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
   font-weight: 400;
   z-index: 1;
   position: relative;
 }
 .contenedor-grid .contenido:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 .contenedor-grid .contenido::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url(../images/fondo.webp);
-  background-size: cover;
-  background-position: center;
+  background-color: transparent;
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 0;
-}
-.contenedor-grid .contenido:hover::before {
-  opacity: 0.6;
 }
 
 @media (max-width: 991.98px) {
