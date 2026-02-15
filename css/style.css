@@ -717,6 +717,9 @@ main .boton-scroll {
   .contacto .contacto-titulo .contacto-texto {
     font-size: 1rem;
   }
+  .contacto .contacto-titulo .contacto-texto-negrita {
+    font-size: 1rem;
+  }
   .contacto .form-contacto {
     max-width: 100%;
     border-width: 2px;
