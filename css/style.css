@@ -1,9 +1,15 @@
-.base {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  max-width: 420px;
-  align-items: center;
+.boton, .seccion-principal .btn-primario, .contacto .btn-formulario, .proyectos .btn-proyectos, .agradecimiento .seccion-agradecimiento .btn-agradecimiento {
+  width: fit-content;
+  position: relative;
+  cursor: pointer;
+  font-family: "plus jakarta sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
 }
 
 /* reset */
@@ -216,41 +222,29 @@ header .navbar-custom .navbar-toggler {
   font-family: "plus jakarta sans", sans-serif;
   margin: 30px 0 20px 0;
 }
-.seccion-principal .btn-inicio {
+.seccion-principal .btn-primario {
   display: inline-block;
-  width: fit-content;
-  position: relative;
-  z-index: 1;
-  padding: 14px 28px;
   margin-top: 50px;
-  font-family: "plus jakarta sans", sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  text-decoration: none;
   color: whitesmoke;
-  background-color: transparent;
-  letter-spacing: 0.1rem;
-  line-height: 1.2;
+  background-color: rgba(0, 0, 0, 0.85);
   border: 3px solid whitesmoke;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+  z-index: 2;
   -webkit-tap-highlight-color: transparent;
 }
-.seccion-principal .btn-inicio:hover {
-  color: #00ff9d;
-  border-color: #00ff9d;
-  box-shadow: 0 0 12px rgba(74, 251, 151, 0.4);
+.seccion-principal .btn-primario:hover {
+  color: whitesmoke;
+  border-color: whitesmoke;
+  box-shadow: 0 0 12px whitesmoke;
   transform: translateY(-1px);
 }
-.seccion-principal .btn-inicio:focus-visible {
+.seccion-principal .btn-primario:focus-visible {
   outline: none;
-  box-shadow: 0 0 2px rgba(74, 251, 151, 0.4);
+  box-shadow: 0 0 2px whitesmoke;
 }
-.seccion-principal .btn-inicio:active {
-  background-color: transparent;
-  color: #00ff9d;
-  border-color: #00ff9d;
+.seccion-principal .btn-primario:active {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: whitesmoke;
+  border-color: whitesmoke;
   box-shadow: none;
   transform: translateY(0);
 }
@@ -294,28 +288,15 @@ header .navbar-custom .navbar-toggler {
     line-height: 1.2;
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
   }
-  .btn-inicio {
-    text-decoration: none;
+  .btn-primario {
     display: flex;
-    margin-top: 80px;
-    padding: 12px 28px;
-    font-size: 1rem;
-    font-family: "plus jakarta sans", sans-serif;
-    color: whitesmoke;
-    background-color: transparent;
-    border: 2px solid whitesmoke;
-    border-radius: 2px;
-    cursor: pointer;
-    width: fit-content;
-    position: relative; /* importante */
-    z-index: 2; /* sobre overlay */
-    transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+    margin-top: 20px;
   }
-  .btn-inicio:hover, .btn-inicio.focus, .btn-inicio:active {
-    color: #00ff9d;
-    background-color: transparent;
-    border-color: #00ff9d;
-    box-shadow: 0 0 6px #00ff9d;
+  .btn-primario:hover, .btn-primario.focus, .btn-primario:active {
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-color: whitesmoke;
+    box-shadow: 0 0 6px whitesmoke;
     transform: translateY(-2px);
   }
 }
@@ -524,7 +505,7 @@ main .boton-scroll {
 }
 .contenedor-grid .contenido h4 {
   color: whitesmoke;
-  font-size: clamp(1.5rem, 4vw, 1.8rem);
+  font-size: clamp(1.3rem, 4vw, 1.6rem);
   font-family: "plus jakarta sans", sans-serif;
   text-transform: uppercase;
   text-align: center;
@@ -560,7 +541,7 @@ main .boton-scroll {
 }
 .contenedor-grid .cierre p {
   color: whitesmoke;
-  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  font-size: clamp(1.1rem, 4vw, 1.4rem);
   font-family: "plus jakarta sans", sans-serif;
   font-weight: 300;
   line-height: 1.1;
@@ -568,7 +549,7 @@ main .boton-scroll {
 }
 .contenedor-grid .cierre h5 {
   color: whitesmoke;
-  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  font-size: clamp(1.1rem, 4vw, 1.4rem);
   font-family: "plus jakarta sans", sans-serif;
   font-weight: 600;
   line-height: 1.1;
@@ -635,6 +616,8 @@ main .boton-scroll {
 .contacto .form-contacto {
   background-image: url(../images/fondo.webp);
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   max-width: 700px;
   margin: 80px auto;
   padding: 60px;
@@ -647,7 +630,7 @@ main .boton-scroll {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 0;
+  z-index: -1;
 }
 .contacto .form-contacto .form-grupo {
   margin-bottom: 60px;
@@ -661,7 +644,7 @@ main .boton-scroll {
   display: block;
   margin-bottom: 10px;
   font-family: "share tech mono", sans-serif;
-  text-transform: uppercase;
+  letter-spacing: 0.1rem;
   z-index: 1;
 }
 .contacto .form-contacto .form-grupo input,
@@ -681,33 +664,28 @@ main .boton-scroll {
   border-color: #00ff9d;
   box-shadow: 0 0 10px #00ff9d;
 }
-.contacto .form-contacto input:-webkit-autofill,
-.contacto .form-contacto input:-webkit-autofill:hover,
-.contacto .form-contacto input:-webkit-autofill:focus,
-.contacto .form-contacto textarea:-webkit-autofill,
-.contacto .form-contacto textarea:-webkit-autofill:hover,
-.contacto .form-contacto textarea:-webkit-autofill:focus {
+.contacto .form-contacto .form-grupo input:-webkit-autofill, .contacto .form-contacto .form-grupo input:-webkit-autofill:hover, .contacto .form-contacto .form-grupo input:-webkit-autofill:focus,
+.contacto .form-contacto .form-grupo textarea:-webkit-autofill,
+.contacto .form-contacto .form-grupo textarea:-webkit-autofill:hover,
+.contacto .form-contacto .form-grupo textarea:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.85) inset;
   -webkit-text-fill-color: whitesmoke;
-  transition: background-color 5000s ease-in-out 0s;
+  caret-color: whitesmoke;
+}
+.contacto .form-contacto .form-grupo input:autofill,
+.contacto .form-contacto .form-grupo textarea:autofill {
+  background-color: rgba(0, 0, 0, 0.85);
 }
 .contacto .btn-formulario {
-  text-decoration: none;
   display: flex;
   margin-top: 80px;
-  padding: 12px 28px;
-  font-size: 1rem;
-  font-family: "plus jakarta sans", sans-serif;
+  padding: 14px 28px;
   color: whitesmoke;
-  letter-spacing: 0.1rem;
   background-color: transparent;
   border: 2px solid whitesmoke;
   border-radius: 2px;
   cursor: pointer;
-  width: fit-content;
-  position: relative; /* importante */
   z-index: 2; /* sobre overlay */
-  transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
 }
 .contacto .btn-formulario:hover, .contacto .btn-formulario.focus, .contacto .btn-formulario:active {
   color: #00ff9d;
@@ -849,22 +827,11 @@ main .boton-scroll {
 .proyectos .btn-proyectos {
   display: flex;
   grid-column: 1/-1;
-  text-decoration: none;
   margin: 3.5rem 0 4rem 0;
-  padding: 12px 28px;
-  font-size: 1rem;
-  font-family: "plus jakarta sans", sans-serif;
-  color: whitesmoke;
-  font-weight: 500;
-  letter-spacing: 0.2rem;
+  color: #00ff9d;
   background-color: transparent;
-  border: 2px solid whitesmoke;
-  border-radius: 2px;
-  cursor: pointer;
-  width: fit-content;
-  position: relative; /* importante */
+  border: 2px solid #00ff9d;
   z-index: 2; /* sobre overlay */
-  transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
 }
 .proyectos .btn-proyectos:hover, .proyectos .btn-proyectos.focus, .proyectos .btn-proyectos:active {
   color: #00ff9d;
@@ -969,21 +936,11 @@ main .boton-scroll {
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  text-decoration: none;
-  letter-spacing: 0.1rem;
   margin: 50px 0 10px 0;
-  padding: 12px 28px;
-  font-size: 1rem;
-  font-family: "plus jakarta sans", sans-serif;
-  color: whitesmoke;
+  color: #00ff9d;
   background-color: transparent;
-  border: 2px solid whitesmoke;
-  border-radius: 2px;
-  cursor: pointer;
-  width: fit-content;
-  position: relative; /* importante */
+  border: 2px solid #00ff9d;
   z-index: 2; /* sobre overlay */
-  transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
 }
 .agradecimiento .seccion-agradecimiento .btn-agradecimiento:hover, .agradecimiento .seccion-agradecimiento .btn-agradecimiento.focus, .agradecimiento .seccion-agradecimiento .btn-agradecimiento:active {
   color: #00ff9d;
