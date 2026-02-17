@@ -712,7 +712,7 @@ animation-iteration-count: infinite;
               color: variables.$color-principal;   
               font-family: "plus jakarta sans", sans-serif; 
                 font-size: clamp(1.1rem, 3vw, 1.3rem);   
-                line-height: 1.5; 
+                line-height: 1.2; 
                 font-weight: 400; 
                
                  position: relative;      
@@ -744,20 +744,21 @@ animation-iteration-count: infinite;
     grid-column:1 / -1;
     text-align: center;
 
-    p{
-        color: variables.$color-principal;
-        font-size:clamp(1.1rem, 4vw, 1.4rem) ;
-        font-family:"plus jakarta sans", sans-serif;
-        font-weight: 300;
-        line-height: 1.1;
-        padding: 3rem 0 0.5rem 0;
-    }
     h5{
         color: variables.$color-principal;
         font-size:clamp(1.1rem, 4vw, 1.4rem) ;
         font-family:"plus jakarta sans", sans-serif;
         font-weight: 600;
-        line-height: 1.1;
+        line-height: 1.2;
+        padding: 3rem 0 0 0;
+        margin-bottom: 0.5rem;
+    }
+    p{
+        color: variables.$color-principal;
+        font-size:clamp(1.1rem, 4vw, 1.4rem) ;
+        font-family:"plus jakarta sans", sans-serif;
+        font-weight: 300;
+        line-height: 1.2;
         padding: 0 0 1.5rem 0;
     }
 }
@@ -818,29 +819,43 @@ animation-iteration-count: infinite;
                 color:variables.$color-principal; 
                 text-shadow: 0 0 6px rgba(0,0,0,0.15);
                 font-size: clamp(2.5rem, 5vw, 4rem); 
+                letter-spacing: 0.05rem;
                 font-weight: 900; 
                 margin: 0 0 3rem 0; 
                 font-family:"Space Grotesk", sans-serif ;     
             } 
             
-            .contacto-texto { 
-                font-size: clamp(1.3rem, 4vw, 1.8rem); 
+            .contacto-subtitulo { 
+                font-size: clamp(1.5rem, 4vw, 1.8rem); 
                 font-family: "plus jakarta sans", sans-serif; 
                 color: variables.$color-principal; 
-                padding: 2rem 0 1rem 0; 
-                font-weight: 400; 
+                letter-spacing: 0.05rem;
+                padding: 2rem 0 ; 
+                font-weight: 600; 
                 line-height: 1.3;
             
             } 
 
             .contacto-texto-negrita{ 
-                font-size: clamp(1.3rem, 4vw, 1.8rem); 
+                font-size: clamp(1.3rem, 3vw, 1.5rem); 
                 font-family: "plus jakarta sans", sans-serif; 
                 color: variables.$color-acento; 
                 line-height: 1.3;
-                font-weight: 600; 
+                font-weight: 400; 
+                letter-spacing: 0.05rem;
 
             } 
+            .contacto-texto { 
+                font-size: clamp(1.3rem, 3vw, 1.5rem); 
+                font-family: "plus jakarta sans", sans-serif; 
+                color: variables.$color-principal; 
+                padding: 0 0 1.5rem 0; 
+                font-weight: 300; 
+                line-height: 1.3;
+                letter-spacing: 0.05rem;
+            
+            } 
+
         } 
 
 // formulario
@@ -1015,7 +1030,7 @@ animation-iteration-count: infinite;
 
     .proyectos-titulo{
         grid-column:1/ -1;  
-        padding: 2rem 0 0 0;
+        padding: 5rem 0 0 0;
         text-align: center;
 
         h2{
@@ -1027,16 +1042,18 @@ animation-iteration-count: infinite;
             text-align: center; 
             padding: 3rem 0 0 0; 
             line-height: 1.5;
+            letter-spacing: 0.05rem;
         }
 
         h3{
-            font-size: clamp(1.5rem, 4vw, 2rem); 
+            font-size: clamp(1.5rem, 4vw, 1.8rem); 
             color: variables.$color-acento; 
             font-weight: 600; 
             text-align: center; 
-            padding: 2rem 0 1.8rem 0; 
+            padding: 4rem 0 1.8rem 0; 
             line-height: 1.4; 
             font-family: "plus jakarta sans", sans-serif; 
+            letter-spacing: 0.05rem;
 
         } 
          
@@ -1044,9 +1061,10 @@ animation-iteration-count: infinite;
         p.color{ 
                 color: variables.$color-principal;  
                 font-family: "plus jakarta sans", sans-serif ;
-                font-weight: 400; 
-                font-size: clamp(1.5rem, 4vw, 2rem); 
-                line-height: 1.3;
+                font-weight: 300; 
+                font-size: clamp(1.3rem, 2vw, 1.5rem); 
+                line-height: 1.2;
+                letter-spacing: 0.05rem;
 
         }  
     }
@@ -1070,7 +1088,7 @@ animation-iteration-count: infinite;
                 display: flex; 
                 position: absolute; 
                 inset: 0; 
-                background: rgba(0, 0, 0, 0.5); 
+                background: rgba(0, 0, 0, 0.7); 
                 color: variables.$color-principal; 
                 flex-direction: column; 
                 justify-content: center; 
@@ -1087,15 +1105,16 @@ animation-iteration-count: infinite;
                 font-weight: 600; 
                padding: 0.5rem 0 0 0 ;
                 font-family: "plus jakarta sans", sans-serif; 
-                letter-spacing: 1px; 
+                letter-spacing: 0.05rem; 
                 text-transform: uppercase; 
+                margin-bottom: 1rem;
                 } 
                 p{ 
-                padding: 0.5rem; 
-                font-size: clamp(1.3rem, 4vw, 1.5rem); 
+                padding: 0  0.5rem; 
+                font-size: clamp(1.2rem, 4vw, 1.4rem); 
                 line-height: 1.1;
     
-                font-weight: 500; 
+                font-weight: 300; 
                 font-family: "plus jakarta sans", sans-serif; 
                  opacity: 0.85; 
                  } 
@@ -1186,19 +1205,6 @@ animation-iteration-count: infinite;
         margin: 20px auto 0 auto;
         max-width: 400px;
               
-                h3{ 
-
-                 padding: 0.5rem 0;
-               
-                } 
-                p{ 
-            
-                padding: 0.5rem 0;
-            
-                line-height: 1.2;
-                 } 
-
-
             } 
 
             
@@ -1223,7 +1229,7 @@ animation-iteration-count: infinite;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    max-width: 900px;
+    max-width: 800px;
     margin: 10px auto;
 
     .seccion-agradecimiento{
@@ -1244,7 +1250,7 @@ animation-iteration-count: infinite;
         font-weight: 900;
     }
     h3{
-        font-size:clamp(1.8rem, 5vw, 2.8rem) ;
+        font-size:clamp(1.5rem, 5vw, 2rem) ;
         color: variables.$color-principal;
         line-height: 1.3;
         font-family: "plus jakarta sans", sans-serif;
@@ -1277,4 +1283,19 @@ animation-iteration-count: infinite;
     } 
 }
     
+}
+
+@media (max-width: 991.98px){
+    .agradecimiento{
+        max-width: 400px;
+        .seccion-agradecimiento{
+            margin: 20px 0;
+
+
+            .btn-agradecimiento{
+            margin: 30px 0 10px 0;
+        }
+        }
+        
+    }
 }
